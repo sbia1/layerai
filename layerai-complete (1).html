@@ -1,0 +1,1091 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" data-lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LayerAI — AI Customer Support Automation for Small Business | Chat, Voice, WhatsApp</title>
+<meta name="description" content="LayerAI automates customer support across chat, voice, WhatsApp, and email for 12+ industries. Set up in 60 seconds. 73% auto-resolution rate. Try free.">
+<meta name="keywords" content="AI customer support, chatbot for business, WhatsApp automation, voice AI, small business AI, customer service automation">
+<link rel="canonical" href="https://layerai.com/">
+<meta property="og:title" content="LayerAI — AI Customer Support That Works While You Sleep">
+<meta property="og:description" content="Automate 73% of customer conversations across every channel. Chat, Voice, WhatsApp, Email. Set up in 60 seconds.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://layerai.com/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="LayerAI — AI Customer Support Automation">
+<link href="https://fonts.googleapis.com/css2?family=General+Sans:wght@300;400;500;600;700&family=Newsreader:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet">
+<style>
+:root{--ease:cubic-bezier(.4,0,.2,1);--spring:cubic-bezier(.34,1.56,.64,1);--dur:.4s;}
+
+[data-theme="light"]{
+  --bg:#F7F4EF;--bg2:#EFEBE4;--card:#FFFFFF;
+  --sf:rgba(0,0,0,.03);--sfh:rgba(0,0,0,.06);
+  --bd:rgba(0,0,0,.08);--bdh:rgba(0,0,0,.14);
+  --tx:#1C1917;--tx2:rgba(28,25,23,.58);--tx3:rgba(28,25,23,.35);--tx4:rgba(28,25,23,.16);
+  --ac:#6D28D9;--acS:rgba(109,40,217,.07);--acB:rgba(109,40,217,.16);
+  --gn:#16A34A;--gnS:rgba(22,163,74,.07);
+  --navBg:rgba(247,244,239,.85);
+  --heroGrad:linear-gradient(165deg,#E0D0F0 0%,#F0C8BC 28%,#FAE0C0 52%,#C4D4F8 100%);
+  --cardSh:0 1px 3px rgba(0,0,0,.03),0 6px 20px rgba(0,0,0,.04);
+  --suiteBg1:linear-gradient(135deg,#F5D0E0 0%,#D0D8F8 100%);
+  --suiteBg2:linear-gradient(135deg,#D0F0E0 0%,#C0D8F8 100%);
+  --suiteBg3:linear-gradient(135deg,#C8E0F8 0%,#E8D0F0 100%);
+  --suiteBg4:linear-gradient(135deg,#F0E8C8 0%,#D8F0D0 100%);
+}
+[data-theme="dark"]{
+  --bg:#0E0B14;--bg2:#181420;--card:#1C1826;
+  --sf:rgba(255,255,255,.04);--sfh:rgba(255,255,255,.07);
+  --bd:rgba(255,255,255,.07);--bdh:rgba(255,255,255,.13);
+  --tx:#F4F2EE;--tx2:rgba(244,242,238,.58);--tx3:rgba(244,242,238,.33);--tx4:rgba(244,242,238,.16);
+  --ac:#A78BFA;--acS:rgba(167,139,250,.1);--acB:rgba(167,139,250,.18);
+  --gn:#4ADE80;--gnS:rgba(74,222,128,.08);
+  --navBg:rgba(14,11,20,.85);
+  --heroGrad:linear-gradient(165deg,#28184A 0%,#3A1E38 28%,#4A2E28 52%,#1C284A 100%);
+  --cardSh:0 1px 3px rgba(0,0,0,.15),0 6px 20px rgba(0,0,0,.12);
+  --suiteBg1:linear-gradient(135deg,#3A1E38 0%,#1C2848 100%);
+  --suiteBg2:linear-gradient(135deg,#1A3828 0%,#1C2848 100%);
+  --suiteBg3:linear-gradient(135deg,#1C2848 0%,#2A1840 100%);
+  --suiteBg4:linear-gradient(135deg,#383018 0%,#1A3828 100%);
+}
+
+*{margin:0;padding:0;box-sizing:border-box;}
+.tilt-card{transition:transform .3s var(--ease);will-change:transform;}
+.tilt-card:hover{transform:translateY(-4px) rotateX(2deg) rotateY(-1deg);perspective:800px;}
+html{scroll-behavior:smooth;}
+body{font-family:'General Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--bg);color:var(--tx);overflow-x:hidden;-webkit-font-smoothing:antialiased;transition:background var(--dur) var(--ease),color var(--dur) var(--ease);}
+
+/* ========= NAV ========= */
+nav{position:fixed;top:0;left:0;right:0;z-index:9999;height:54px;padding:0 32px;
+  background:var(--navBg);
+  backdrop-filter:blur(40px) saturate(200%);-webkit-backdrop-filter:blur(40px) saturate(200%);
+  border-bottom:1px solid var(--bd);
+  display:flex;align-items:center;justify-content:space-between;
+  transition:all var(--dur) var(--ease);
+  box-shadow:0 0 0 0.5px rgba(255,255,255,.06),0 1px 8px rgba(0,0,0,.04);}
+.n-left{display:flex;align-items:center;gap:28px;}
+.n-brand{font-size:16px;font-weight:700;letter-spacing:-.3px;color:var(--ac);}
+.n-links{display:flex;gap:2px;}
+.n-link{color:var(--tx2);text-decoration:none;font-size:13px;font-weight:500;padding:6px 12px;border-radius:7px;transition:all .2s;}
+.n-link:hover{color:var(--tx);background:var(--sf);}
+.n-right{display:flex;align-items:center;gap:4px;}
+.n-ctrl{height:30px;padding:0 10px;border-radius:8px;border:none;color:var(--tx2);font-family:inherit;font-size:11px;font-weight:600;cursor:pointer;display:inline-flex;align-items:center;transition:all .2s;
+  background:rgba(255,255,255,.05);
+  box-shadow:inset 0 0.5px 0 rgba(255,255,255,.06);}
+[data-theme="light"] .n-ctrl{background:rgba(255,255,255,.4);}
+.n-ctrl:hover{background:var(--sfh);color:var(--tx);}
+.n-ctrl select{background:none;border:none;color:inherit;font:inherit;cursor:pointer;appearance:none;}
+.n-cta{height:30px;padding:0 16px;border-radius:8px;color:#fff;font-size:11px;font-weight:600;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:4px;transition:all .2s;
+  background:linear-gradient(180deg,rgba(109,40,217,.92),rgba(88,28,180,.92));
+  border:0.5px solid rgba(255,255,255,.15);
+  box-shadow:0 1px 6px rgba(109,40,217,.2),inset 0 0.5px 0 rgba(255,255,255,.15);}
+.n-cta:hover{filter:brightness(1.15);}
+
+/* ========= HERO ========= */
+.hero{position:relative;min-height:100vh;overflow:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:120px 24px 60px;}
+.hero-bg{position:absolute;inset:0;background:var(--heroGrad);transition:background .6s var(--ease);z-index:0;}
+.hero-bg::after{content:'';position:absolute;bottom:0;left:0;right:0;height:35%;background:linear-gradient(to top,var(--bg),transparent);}
+
+/* Hero visual — animated gradient mesh blob */
+.hero-blob{
+  position:absolute;bottom:5%;left:50%;transform:translateX(-50%);z-index:1;
+  width:420px;height:420px;pointer-events:none;
+  animation:blobIn 1.2s cubic-bezier(.191,.703,.704,.952) .3s both;
+}
+@keyframes blobIn{from{opacity:0;transform:translateX(-50%) scale(.7);}to{opacity:1;transform:translateX(-50%) scale(1);}}
+
+.blob-wrap{position:relative;width:100%;height:100%;}
+
+.blob-shape{
+  position:absolute;border-radius:50%;filter:blur(50px);
+  animation-timing-function:ease-in-out;animation-iteration-count:infinite;
+}
+.blob-1{
+  width:70%;height:70%;top:10%;left:10%;
+  background:radial-gradient(circle at 40% 40%,rgba(167,139,250,.6),rgba(109,40,217,.35) 60%,transparent 80%);
+  animation:morph1 8s infinite;
+}
+.blob-2{
+  width:55%;height:55%;top:25%;left:30%;
+  background:radial-gradient(circle at 60% 30%,rgba(196,181,253,.5),rgba(139,92,246,.3) 50%,transparent 75%);
+  animation:morph2 10s infinite;
+}
+.blob-3{
+  width:50%;height:50%;top:15%;left:5%;
+  background:radial-gradient(circle at 30% 60%,rgba(109,40,217,.4),rgba(76,29,149,.2) 55%,transparent 80%);
+  animation:morph3 12s infinite;
+}
+.blob-4{
+  width:40%;height:45%;top:35%;left:45%;
+  background:radial-gradient(circle at 50% 50%,rgba(221,214,254,.4),rgba(167,139,250,.2) 50%,transparent 80%);
+  animation:morph4 9s infinite;
+}
+/* Warm accent blobs */
+.blob-5{
+  width:35%;height:35%;top:40%;left:15%;
+  background:radial-gradient(circle,rgba(240,200,188,.3),transparent 70%);
+  animation:morph2 11s infinite 1s;
+}
+.blob-6{
+  width:30%;height:30%;top:8%;left:50%;
+  background:radial-gradient(circle,rgba(196,212,248,.35),transparent 70%);
+  animation:morph1 13s infinite 2s;
+}
+
+[data-theme="light"] .blob-1{background:radial-gradient(circle at 40% 40%,rgba(167,139,250,.35),rgba(109,40,217,.15) 60%,transparent 80%);}
+[data-theme="light"] .blob-2{background:radial-gradient(circle at 60% 30%,rgba(196,181,253,.3),rgba(139,92,246,.12) 50%,transparent 75%);}
+[data-theme="light"] .blob-3{background:radial-gradient(circle at 30% 60%,rgba(109,40,217,.2),rgba(76,29,149,.08) 55%,transparent 80%);}
+[data-theme="light"] .blob-4{background:radial-gradient(circle at 50% 50%,rgba(221,214,254,.3),rgba(167,139,250,.1) 50%,transparent 80%);}
+[data-theme="light"] .blob-5{background:radial-gradient(circle,rgba(240,200,188,.25),transparent 70%);}
+[data-theme="light"] .blob-6{background:radial-gradient(circle,rgba(196,212,248,.25),transparent 70%);}
+
+@keyframes morph1{
+  0%,100%{border-radius:42% 58% 64% 36%/55% 40% 60% 45%;transform:rotate(0deg) scale(1);}
+  25%{border-radius:55% 45% 38% 62%/48% 60% 40% 52%;}
+  50%{border-radius:38% 62% 52% 48%/62% 35% 65% 38%;transform:rotate(60deg) scale(1.05);}
+  75%{border-radius:60% 40% 45% 55%/38% 55% 45% 62%;}
+}
+@keyframes morph2{
+  0%,100%{border-radius:55% 45% 50% 50%/45% 55% 45% 55%;transform:rotate(0deg);}
+  33%{border-radius:40% 60% 55% 45%/60% 40% 60% 40%;transform:rotate(-40deg) scale(1.06);}
+  66%{border-radius:60% 40% 42% 58%/42% 58% 42% 58%;transform:rotate(30deg);}
+}
+@keyframes morph3{
+  0%,100%{border-radius:48% 52% 60% 40%/52% 48% 52% 48%;transform:rotate(0deg) scale(1);}
+  50%{border-radius:52% 48% 40% 60%/48% 52% 48% 52%;transform:rotate(-50deg) scale(1.08);}
+}
+@keyframes morph4{
+  0%,100%{border-radius:50% 50% 55% 45%/50% 50% 50% 50%;transform:rotate(0deg);}
+  33%{border-radius:45% 55% 50% 50%/55% 45% 55% 45%;transform:rotate(45deg) scale(1.04);}
+  66%{border-radius:55% 45% 45% 55%/45% 55% 45% 55%;transform:rotate(-30deg);}
+}
+
+/* Floating UI cards — Apple glass */
+.float-card{
+  position:absolute;z-index:3;
+  border-radius:16px;padding:16px 20px;
+  background:rgba(255,255,255,.08);
+  border:0.5px solid rgba(255,255,255,.18);
+  box-shadow:0 8px 32px rgba(0,0,0,.12),inset 0 0.5px 0 rgba(255,255,255,.15);
+  backdrop-filter:blur(24px) saturate(180%);-webkit-backdrop-filter:blur(24px) saturate(180%);
+  transition:all var(--dur) var(--ease);
+}
+[data-theme="light"] .float-card{
+  background:rgba(255,255,255,.55);
+  border:0.5px solid rgba(255,255,255,.7);
+  box-shadow:0 8px 32px rgba(0,0,0,.06),inset 0 0.5px 0 rgba(255,255,255,.8);
+}
+.fc-1{left:6%;top:32%;width:280px;animation:floatIn .8s var(--spring) .5s both;}
+.fc-2{right:5%;top:24%;width:300px;animation:floatIn .8s var(--spring) .7s both;}
+.fc-3{left:12%;bottom:22%;width:320px;animation:floatIn .8s var(--spring) .9s both;}
+.fc-4{right:8%;bottom:18%;width:220px;animation:floatIn .8s var(--spring) 1.1s both;}
+
+@keyframes floatIn{from{opacity:0;transform:translateY(30px) scale(.95);}to{opacity:1;transform:none;}}
+@keyframes gentleFloat{0%,100%{transform:translateY(0);}50%{transform:translateY(-10px);}}
+
+/* Fireflies */
+.fireflies{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:1;}
+.firefly{position:absolute;width:3px;height:3px;border-radius:50%;background:rgba(167,139,250,.5);animation:fly linear infinite;}
+[data-theme="light"] .firefly{background:rgba(109,40,217,.25);}
+@keyframes fly{0%{transform:translateY(0) translateX(0);opacity:0;}10%{opacity:1;}90%{opacity:1;}100%{transform:translateY(-100vh) translateX(40px);opacity:0;}}
+
+.fc-label{font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:var(--tx3);margin-bottom:8px;}
+.fc-msg{font-size:12px;color:var(--tx2);line-height:1.55;}
+.fc-bubble{padding:8px 14px;border-radius:10px;background:var(--acS);font-size:11px;color:var(--tx);margin-top:6px;display:inline-block;}
+.fc-bubble.user{background:var(--sf);float:right;clear:both;}
+.fc-row{display:flex;gap:8px;margin-top:6px;}
+.fc-chip{padding:4px 10px;border-radius:50px;background:var(--sf);border:1px solid var(--bd);font-size:10px;color:var(--tx2);font-weight:500;}
+.fc-inbox-row{padding:6px 0;border-bottom:1px solid var(--bd);display:flex;gap:8px;font-size:10px;color:var(--tx2);}
+.fc-inbox-row:last-child{border:none;}
+.fc-inbox-name{font-weight:600;color:var(--tx);min-width:70px;}
+
+.hero-content{position:relative;z-index:4;max-width:680px;}
+.hero-pill{display:inline-flex;align-items:center;gap:7px;padding:6px 16px;border-radius:50px;font-size:11px;font-weight:600;color:var(--ac);margin-bottom:28px;animation:fadeUp .6s var(--ease) .2s both;
+  background:rgba(109,40,217,.06);border:0.5px solid rgba(109,40,217,.15);
+  backdrop-filter:blur(16px) saturate(180%);-webkit-backdrop-filter:blur(16px) saturate(180%);
+  box-shadow:0 2px 12px rgba(109,40,217,.06),inset 0 0.5px 0 rgba(255,255,255,.08);}
+.hero-pill .dot{width:5px;height:5px;border-radius:50%;background:var(--gn);box-shadow:0 0 6px var(--gn);}
+
+.hero h1{font-size:clamp(40px,6.5vw,72px);font-weight:600;line-height:1.06;letter-spacing:-2.5px;animation:fadeUp .6s var(--ease) .35s both;}
+.hero-sub{font-size:clamp(14px,1.5vw,17px);color:var(--tx2);max-width:480px;margin:18px auto 30px;line-height:1.6;animation:fadeUp .6s var(--ease) .5s both;}
+.hero-btns{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;animation:fadeUp .6s var(--ease) .62s both;}
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:none;}}
+
+.btn-main{padding:13px 28px;border-radius:50px;
+  background:linear-gradient(180deg,rgba(109,40,217,.95),rgba(88,28,180,.95));
+  color:#fff;font-weight:600;font-size:14px;font-family:inherit;
+  border:0.5px solid rgba(255,255,255,.2);cursor:pointer;text-decoration:none;
+  display:inline-flex;align-items:center;gap:6px;transition:all .25s;
+  box-shadow:0 2px 12px rgba(109,40,217,.25),inset 0 0.5px 0 rgba(255,255,255,.2);}
+.btn-main:hover{filter:brightness(1.12);transform:translateY(-1px);box-shadow:0 6px 28px rgba(109,40,217,.3);}
+.btn-ghost{padding:13px 28px;border-radius:50px;
+  background:rgba(255,255,255,.08);
+  backdrop-filter:blur(20px) saturate(180%);-webkit-backdrop-filter:blur(20px) saturate(180%);
+  color:var(--tx);font-weight:600;font-size:14px;font-family:inherit;
+  border:0.5px solid rgba(255,255,255,.15);cursor:pointer;text-decoration:none;
+  transition:all .25s;
+  box-shadow:inset 0 0.5px 0 rgba(255,255,255,.15);}
+[data-theme="light"] .btn-ghost{background:rgba(255,255,255,.55);border-color:rgba(255,255,255,.7);box-shadow:0 2px 8px rgba(0,0,0,.04),inset 0 0.5px 0 rgba(255,255,255,.8);}
+.btn-ghost:hover{background:rgba(255,255,255,.15);}
+[data-theme="light"] .btn-ghost:hover{background:rgba(255,255,255,.75);}
+
+/* ========= TRUST ========= */
+.trust{padding:56px 24px;text-align:center;}
+.trust-lbl{font-size:12px;color:var(--tx3);font-weight:500;margin-bottom:20px;}
+.trust-row{display:flex;align-items:center;justify-content:center;gap:36px;flex-wrap:wrap;}
+.trust-logo{font-size:15px;font-weight:700;color:var(--tx4);letter-spacing:.8px;text-transform:uppercase;transition:color .3s;}
+.trust-logo:hover{color:var(--tx3);}
+
+/* ========= SUITE ========= */
+.suite{padding:80px 24px 100px;}
+.container{max-width:1080px;margin:0 auto;}
+.suite-hdr{display:flex;align-items:center;justify-content:space-between;margin-bottom:36px;flex-wrap:wrap;gap:14px;}
+.suite-hdr h2{font-size:clamp(26px,3.5vw,38px);font-weight:600;letter-spacing:-1px;}
+.suite-hdr .s-cta{padding:10px 20px;border-radius:50px;font-size:12px;font-weight:600;color:var(--tx);cursor:pointer;font-family:inherit;transition:all .2s;text-decoration:none;
+  background:rgba(255,255,255,.06);border:0.5px solid rgba(255,255,255,.12);
+  backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+  box-shadow:inset 0 0.5px 0 rgba(255,255,255,.1);}
+[data-theme="light"] .suite-hdr .s-cta{background:rgba(255,255,255,.55);border-color:rgba(255,255,255,.7);}
+.suite-hdr .s-cta:hover{border-color:var(--ac);color:var(--ac);}
+
+.s-tabs{display:flex;gap:0;margin-bottom:0;border-bottom:0.5px solid rgba(255,255,255,.08);
+  background:rgba(255,255,255,.02);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);
+  border-radius:14px 14px 0 0;overflow:hidden;}
+[data-theme="light"] .s-tabs{background:rgba(255,255,255,.3);border-bottom-color:rgba(0,0,0,.06);}
+.s-tab{flex:1;padding:14px 0;text-align:center;font-size:13px;font-weight:600;color:var(--tx3);cursor:pointer;border-bottom:2px solid transparent;transition:all .25s;background:none;border-top:none;border-left:none;border-right:none;font-family:inherit;}
+.s-tab:hover{color:var(--tx);}
+.s-tab.on{color:var(--tx);border-bottom-color:var(--ac);}
+
+.s-panel{display:none;animation:panelIn .5s var(--ease);}
+.s-panel.on{display:block;}
+@keyframes panelIn{from{opacity:0;transform:translateY(14px);}to{opacity:1;transform:none;}}
+
+.s-card{display:grid;grid-template-columns:1fr 1.1fr;gap:0;margin-top:0;
+  border:0.5px solid rgba(255,255,255,.1);border-top:none;border-radius:0 0 18px 18px;overflow:hidden;
+  background:rgba(255,255,255,.04);
+  backdrop-filter:blur(20px) saturate(170%);-webkit-backdrop-filter:blur(20px) saturate(170%);
+  box-shadow:0 8px 30px rgba(0,0,0,.06),inset 0 0.5px 0 rgba(255,255,255,.08);
+  transition:all var(--dur) var(--ease);}
+[data-theme="light"] .s-card{background:rgba(255,255,255,.6);border-color:rgba(255,255,255,.7);box-shadow:0 8px 30px rgba(0,0,0,.04),inset 0 0.5px 0 rgba(255,255,255,.9);}
+.s-text{padding:40px 36px;display:flex;flex-direction:column;justify-content:center;}
+.s-badge{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:var(--ac);margin-bottom:8px;display:flex;align-items:center;gap:6px;}
+.s-badge::before{content:'';width:8px;height:8px;border-radius:50%;background:var(--ac);}
+.s-title{font-size:clamp(22px,2.8vw,32px);font-weight:600;letter-spacing:-.8px;line-height:1.12;margin-bottom:10px;}
+.s-desc{font-size:13px;color:var(--tx2);line-height:1.65;margin-bottom:16px;}
+.s-link{font-size:12px;font-weight:600;color:var(--ac);text-decoration:none;display:inline-flex;align-items:center;gap:4px;transition:gap .2s var(--ease);}
+.s-link:hover{gap:8px;}
+.s-features{list-style:none;margin-top:18px;display:flex;flex-direction:column;gap:10px;}
+.s-features li{font-size:12px;color:var(--tx2);display:flex;align-items:flex-start;gap:10px;line-height:1.5;}
+.s-features .ck{width:16px;height:16px;border-radius:50%;border:1.5px solid var(--bd);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;font-size:0;}
+
+.s-visual{position:relative;overflow:hidden;min-height:400px;}
+.s-visual-bg{position:absolute;inset:0;transition:background .5s var(--ease);}
+.sv-1 .s-visual-bg{background:var(--suiteBg1);}
+.sv-2 .s-visual-bg{background:var(--suiteBg2);}
+.sv-3 .s-visual-bg{background:var(--suiteBg3);}
+.sv-4 .s-visual-bg{background:var(--suiteBg4);}
+/* Decorative arc line */
+.s-visual::after{content:'';position:absolute;width:140%;height:140%;top:20%;left:-20%;border:1px dashed rgba(255,255,255,.2);border-radius:50%;pointer-events:none;}
+
+.s-mockup{position:relative;z-index:2;margin:30px 20px;border-radius:14px;
+  background:rgba(255,255,255,.06);
+  border:0.5px solid rgba(255,255,255,.12);overflow:hidden;
+  box-shadow:0 8px 30px rgba(0,0,0,.1),inset 0 0.5px 0 rgba(255,255,255,.1);
+  backdrop-filter:blur(16px) saturate(160%);-webkit-backdrop-filter:blur(16px) saturate(160%);
+  transition:all var(--dur) var(--ease);}
+[data-theme="light"] .s-mockup{background:rgba(255,255,255,.7);border-color:rgba(255,255,255,.8);box-shadow:0 8px 30px rgba(0,0,0,.06),inset 0 0.5px 0 rgba(255,255,255,.9);}
+.sm-top{height:28px;background:var(--sf);border-bottom:1px solid var(--bd);display:flex;align-items:center;gap:5px;padding:0 10px;}
+.sm-dot{width:7px;height:7px;border-radius:50%;}.sm-r{background:#FF5F57;}.sm-y{background:#FFBD2E;}.sm-g{background:#28CA42;}
+.sm-body{padding:14px;font-size:11px;}
+.sm-chat-row{display:flex;gap:8px;margin-bottom:8px;align-items:flex-start;}
+.sm-ava{width:22px;height:22px;border-radius:50%;background:var(--ac);flex-shrink:0;}
+.sm-bub{padding:7px 11px;border-radius:10px;background:var(--acS);color:var(--tx2);max-width:75%;line-height:1.45;font-size:10px;}
+.sm-bub.u{background:var(--sf);margin-left:auto;}
+.sm-tabs{display:flex;gap:0;border-bottom:1px solid var(--bd);padding:0 14px;}
+.sm-tab{padding:8px 12px;font-size:9px;font-weight:600;color:var(--tx3);border-bottom:1.5px solid transparent;}
+.sm-tab.on{color:var(--tx);border-bottom-color:var(--ac);}
+.sm-row{padding:7px 14px;border-bottom:1px solid var(--bd);display:flex;gap:10px;font-size:10px;color:var(--tx2);}
+.sm-row-name{font-weight:600;color:var(--tx);min-width:80px;}
+
+/* ========= MANIFESTO ========= */
+.manifesto{position:relative;padding:120px 24px;overflow:hidden;background:var(--bg2);transition:background var(--dur) var(--ease);}
+.manifesto-bg{position:absolute;inset:0;z-index:0;overflow:hidden;}
+
+/* Abstract gradient art */
+.manifesto-art{position:absolute;inset:0;}
+.manifesto-art::before{
+  content:'';position:absolute;
+  width:600px;height:600px;top:-15%;left:10%;
+  background:radial-gradient(circle,rgba(109,40,217,.35),transparent 65%);
+  border-radius:42% 58% 64% 36%/55% 40% 60% 45%;
+  animation:mBlob1 15s ease-in-out infinite;
+}
+.manifesto-art::after{
+  content:'';position:absolute;
+  width:500px;height:500px;bottom:-10%;right:10%;
+  background:radial-gradient(circle,rgba(240,200,188,.3),transparent 60%);
+  border-radius:55% 45% 38% 62%/48% 60% 40% 52%;
+  animation:mBlob2 12s ease-in-out infinite;
+}
+.m-orb1,.m-orb2,.m-orb3{position:absolute;border-radius:50%;pointer-events:none;}
+.m-orb1{
+  width:400px;height:400px;top:10%;left:50%;transform:translateX(-50%);
+  background:radial-gradient(circle at 40% 40%,rgba(196,181,253,.22),transparent 65%);
+  animation:mBlob3 10s ease-in-out infinite;
+}
+.m-orb2{
+  width:280px;height:280px;bottom:5%;left:20%;
+  background:radial-gradient(circle,rgba(167,139,250,.18),transparent 65%);
+  animation:mBlob1 13s ease-in-out infinite 2s;
+}
+.m-orb3{
+  width:300px;height:300px;top:5%;right:15%;
+  background:radial-gradient(circle,rgba(196,212,248,.2),transparent 65%);
+  animation:mBlob2 11s ease-in-out infinite 1s;
+}
+/* Decorative circles */
+.m-ring1,.m-ring2{position:absolute;border-radius:50%;border:1px dashed;pointer-events:none;opacity:.18;}
+.m-ring1{width:600px;height:600px;top:50%;left:50%;transform:translate(-50%,-50%);border-color:var(--ac);animation:mSpin 40s linear infinite;}
+.m-ring2{width:420px;height:420px;top:50%;left:50%;transform:translate(-50%,-50%);border-color:var(--ac);animation:mSpin 30s linear infinite reverse;}
+
+[data-theme="light"] .manifesto-art::before{background:radial-gradient(circle,rgba(109,40,217,.12),transparent 65%);}
+[data-theme="light"] .manifesto-art::after{background:radial-gradient(circle,rgba(240,200,188,.15),transparent 60%);}
+[data-theme="light"] .m-orb1{background:radial-gradient(circle at 40% 40%,rgba(196,181,253,.15),transparent 65%);}
+[data-theme="light"] .m-orb2{background:radial-gradient(circle,rgba(167,139,250,.1),transparent 65%);}
+[data-theme="light"] .m-orb3{background:radial-gradient(circle,rgba(196,212,248,.15),transparent 65%);}
+
+@keyframes mBlob1{0%,100%{border-radius:42% 58% 64% 36%/55% 40% 60% 45%;transform:rotate(0);}50%{border-radius:58% 42% 36% 64%/40% 55% 45% 60%;transform:rotate(30deg);}}
+@keyframes mBlob2{0%,100%{border-radius:55% 45% 50% 50%/45% 55% 45% 55%;transform:rotate(0);}50%{border-radius:45% 55% 50% 50%/55% 45% 55% 45%;transform:rotate(-25deg);}}
+@keyframes mBlob3{0%,100%{border-radius:50% 50% 55% 45%/50% 50% 50% 50%;transform:scale(1);}50%{border-radius:45% 55% 50% 50%/55% 45% 55% 45%;transform:scale(1.08);}}
+@keyframes mSpin{to{transform:translate(-50%,-50%) rotate(360deg);}}
+
+.manifesto-content{position:relative;z-index:2;max-width:620px;margin:0 auto;padding:48px;border-radius:24px;text-align:center;
+  background:rgba(255,255,255,.06);
+  backdrop-filter:blur(30px) saturate(180%);-webkit-backdrop-filter:blur(30px) saturate(180%);
+  border:0.5px solid rgba(255,255,255,.12);
+  box-shadow:0 8px 40px rgba(0,0,0,.08),inset 0 0.5px 0 rgba(255,255,255,.12);}
+[data-theme="light"] .manifesto-content{background:rgba(255,255,255,.65);border-color:rgba(255,255,255,.8);box-shadow:0 8px 40px rgba(0,0,0,.04),inset 0 0.5px 0 rgba(255,255,255,.9);}
+.manifesto-content h2{font-size:clamp(24px,3vw,34px);font-weight:600;letter-spacing:-.8px;margin-bottom:10px;color:var(--tx);}
+.manifesto-content p{font-size:13px;color:var(--tx2);line-height:1.7;}
+
+/* ========= SECTIONS ========= */
+section{position:relative;z-index:2;padding:110px 24px;}
+.sec-ey{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:var(--ac);margin-bottom:10px;}
+.sec-h{font-size:clamp(26px,4vw,42px);font-weight:600;letter-spacing:-1.2px;line-height:1.1;max-width:520px;}
+.sec-p{font-size:13px;color:var(--tx2);margin-top:10px;max-width:420px;line-height:1.6;}
+.reveal{opacity:0;transform:translateY(28px);transition:all .7s var(--ease);}.reveal.vis{opacity:1;transform:none;}
+.stagger>*{opacity:0;transform:translateY(16px);transition:all .5s var(--ease);}
+.stagger.vis>*{opacity:1;transform:none;}
+.stagger.vis>*:nth-child(1){transition-delay:.05s;}
+.stagger.vis>*:nth-child(2){transition-delay:.1s;}
+.stagger.vis>*:nth-child(3){transition-delay:.15s;}
+.stagger.vis>*:nth-child(4){transition-delay:.2s;}
+.stagger.vis>*:nth-child(5){transition-delay:.25s;}
+.stagger.vis>*:nth-child(6){transition-delay:.3s;}
+
+/* ========= WIZARD (compact) ========= */
+#wizard{padding-top:60px;}
+.wiz{margin-top:32px;border-radius:20px;overflow:hidden;
+  background:rgba(255,255,255,.04);
+  border:0.5px solid rgba(255,255,255,.1);
+  box-shadow:0 4px 40px rgba(0,0,0,.06),inset 0 0.5px 0 rgba(255,255,255,.1);
+  backdrop-filter:blur(30px) saturate(180%);-webkit-backdrop-filter:blur(30px) saturate(180%);
+  transition:all var(--dur) var(--ease);}
+[data-theme="light"] .wiz{background:rgba(255,255,255,.6);border-color:rgba(255,255,255,.7);box-shadow:0 4px 40px rgba(0,0,0,.04),inset 0 0.5px 0 rgba(255,255,255,.9);}
+.wiz-hd{padding:14px 22px;border-bottom:1px solid var(--bd);display:flex;align-items:center;gap:7px;}
+.wd{width:24px;height:24px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;background:var(--sf);color:var(--tx3);border:1px solid var(--bd);transition:all .3s;}
+.wd.on{background:var(--ac);color:#fff;border-color:var(--ac);}.wd.ok{background:var(--gn);color:#fff;border-color:var(--gn);}
+.wl{width:20px;height:2px;background:var(--bd);border-radius:2px;transition:background .3s;}.wl.on{background:var(--ac);}
+.wiz-bd{padding:28px 22px;min-height:400px;}
+.wp{display:none;animation:panelIn .4s var(--ease);}.wp.on{display:block;}
+.wpt{font-size:18px;font-weight:600;letter-spacing:-.3px;}.wpd{font-size:12px;color:var(--tx2);margin-top:3px;}
+
+.ig{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:7px;margin-top:16px;}
+.ic{padding:14px 10px;border-radius:12px;text-align:center;cursor:pointer;
+  background:rgba(255,255,255,.04);border:0.5px solid rgba(255,255,255,.08);
+  backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);
+  box-shadow:inset 0 0.5px 0 rgba(255,255,255,.06);transition:all .2s var(--ease);}
+.ic:hover{background:rgba(255,255,255,.08);transform:translateY(-2px);border-color:rgba(255,255,255,.14);}
+.ic.sel{background:rgba(109,40,217,.08);border-color:rgba(109,40,217,.25);box-shadow:0 0 16px rgba(109,40,217,.08),inset 0 0.5px 0 rgba(255,255,255,.1);}
+[data-theme="light"] .ic{background:rgba(255,255,255,.5);border-color:rgba(255,255,255,.7);}
+[data-theme="light"] .ic:hover{background:rgba(255,255,255,.7);}
+[data-theme="light"] .ic.sel{background:rgba(109,40,217,.06);border-color:rgba(109,40,217,.2);}
+.ic-i{font-size:22px;display:inline-block;margin-bottom:2px;line-height:1;}.ic.sel .ic-i{transform:scale(1.15);}
+.ic-n{font-size:11px;font-weight:600;margin-top:4px;}.ic-r{font-size:9px;color:var(--ac);font-weight:600;margin-top:1px;}
+
+.fg{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px;}
+.fgi{display:flex;flex-direction:column;gap:3px;}.fgi.full{grid-column:1/-1;}
+.fl{font-size:9px;font-weight:600;color:var(--tx3);text-transform:uppercase;letter-spacing:.5px;}
+.fi{padding:10px 12px;border-radius:10px;color:var(--tx);font-size:12px;font-family:inherit;outline:none;transition:all .2s;
+  background:rgba(255,255,255,.04);border:0.5px solid rgba(255,255,255,.1);
+  backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);}
+.fi:focus{border-color:var(--ac);box-shadow:0 0 0 3px rgba(109,40,217,.08);}
+.fi::placeholder{color:var(--tx4);}
+[data-theme="light"] .fi{background:rgba(255,255,255,.5);border-color:rgba(0,0,0,.08);}
+select.fi{cursor:pointer;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 24 24' fill='none' stroke='%23999' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 10px center;padding-right:24px;}
+select.fi option{background:var(--card);color:var(--tx);}
+.tone-row{display:flex;gap:5px;margin-top:2px;}
+.to{flex:1;padding:9px;border-radius:10px;text-align:center;cursor:pointer;font-size:10px;font-weight:600;color:var(--tx2);transition:all .2s;
+  background:rgba(255,255,255,.04);border:0.5px solid rgba(255,255,255,.08);
+  backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);}
+.to:hover{background:rgba(255,255,255,.08);}
+.to.sel{background:rgba(109,40,217,.08);border-color:rgba(109,40,217,.2);color:var(--ac);}
+[data-theme="light"] .to{background:rgba(255,255,255,.45);border-color:rgba(255,255,255,.6);}
+[data-theme="light"] .to:hover{background:rgba(255,255,255,.65);}
+.svcs{display:flex;flex-wrap:wrap;gap:4px;margin-top:2px;}
+.sv{padding:5px 10px;border-radius:50px;cursor:pointer;user-select:none;font-size:9px;font-weight:500;color:var(--tx2);transition:all .2s;
+  background:rgba(255,255,255,.04);border:0.5px solid rgba(255,255,255,.08);
+  backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);}
+.sv:hover{background:rgba(255,255,255,.08);}
+.sv.sel{background:rgba(109,40,217,.08);border-color:rgba(109,40,217,.2);color:var(--ac);}
+[data-theme="light"] .sv{background:rgba(255,255,255,.4);border-color:rgba(255,255,255,.6);}
+
+.bld{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:320px;text-align:center;}
+.bld-sp{width:44px;height:44px;border-radius:50%;border:3px solid var(--bd);border-top-color:var(--ac);animation:spin .7s linear infinite;margin-bottom:16px;}
+@keyframes spin{to{transform:rotate(360deg);}}
+.bld-l{margin-top:14px;text-align:left;}
+.bli{padding:5px 0;font-size:11px;color:var(--tx3);display:flex;align-items:center;gap:7px;transition:color .3s;}.bli.on{color:var(--ac);}.bli.ok{color:var(--gn);}
+
+/* Demo playground */
+.dp{display:grid;grid-template-columns:180px 1fr;gap:12px;min-height:420px;}
+.dpt{display:flex;flex-direction:column;gap:4px;}
+.dt{padding:10px 12px;border-radius:10px;cursor:pointer;display:flex;align-items:center;gap:8px;transition:all .2s;
+  background:rgba(255,255,255,.03);border:0.5px solid rgba(255,255,255,.06);
+  backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);}
+[data-theme="light"] .dt{background:rgba(255,255,255,.3);border-color:rgba(255,255,255,.5);}
+.dt:hover{background:rgba(255,255,255,.07);border-color:rgba(255,255,255,.12);}
+.dt.on{background:rgba(109,40,217,.08);border-color:rgba(109,40,217,.2);box-shadow:inset 0 0.5px 0 rgba(255,255,255,.1);}
+[data-theme="light"] .dt:hover{background:rgba(255,255,255,.5);}
+[data-theme="light"] .dt.on{background:rgba(109,40,217,.06);border-color:rgba(109,40,217,.15);}
+.dti{width:26px;height:26px;border-radius:6px;background:var(--sf);display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:800;color:var(--tx3);}.dt.on .dti{background:var(--ac);color:#fff;}
+.dtn{font-size:11px;font-weight:600;}.dts{font-size:8px;color:var(--tx3);}
+.dp-cta{margin-top:auto;padding:12px;border-radius:8px;text-align:center;background:var(--gnS);border:1px solid rgba(22,163,74,.1);}
+.dp-cta .dct{font-size:11px;font-weight:700;color:var(--gn);}.dp-cta .dcs{font-size:8px;color:var(--tx3);margin-top:2px;}
+.dp-cta button{margin-top:6px;width:100%;padding:8px;border-radius:50px;color:#fff;font-weight:700;font-size:10px;cursor:pointer;font-family:inherit;
+  background:linear-gradient(180deg,rgba(22,163,74,.92),rgba(18,140,64,.92));
+  border:0.5px solid rgba(255,255,255,.15);
+  box-shadow:0 2px 6px rgba(22,163,74,.2),inset 0 0.5px 0 rgba(255,255,255,.15);}
+
+.dpp{display:none;height:100%;}.dpp.on{display:flex;flex-direction:column;}
+
+/* Chat */
+.cf{flex:1;display:flex;flex-direction:column;border-radius:14px;overflow:hidden;transition:all var(--dur) var(--ease);
+  background:rgba(255,255,255,.04);border:0.5px solid rgba(255,255,255,.1);
+  backdrop-filter:blur(16px) saturate(170%);-webkit-backdrop-filter:blur(16px) saturate(170%);
+  box-shadow:0 4px 24px rgba(0,0,0,.06),inset 0 0.5px 0 rgba(255,255,255,.08);}
+[data-theme="light"] .cf{background:rgba(255,255,255,.55);border-color:rgba(255,255,255,.7);}
+.cf-t{padding:9px 12px;background:var(--sf);border-bottom:1px solid var(--bd);display:flex;align-items:center;gap:7px;}
+.cf-av{width:26px;height:26px;border-radius:50%;background:var(--ac);display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:700;color:#fff;}
+.cf-nm{font-size:11px;font-weight:600;}.cf-st{font-size:8px;color:var(--gn);display:flex;align-items:center;gap:3px;}.cf-st::before{content:'';width:4px;height:4px;border-radius:50%;background:var(--gn);}
+.cf-ms{flex:1;overflow-y:auto;padding:12px;display:flex;flex-direction:column;gap:6px;}
+.cf-ms::-webkit-scrollbar{width:2px;}.cf-ms::-webkit-scrollbar-thumb{background:var(--bd);border-radius:2px;}
+.msg{max-width:82%;padding:8px 11px;border-radius:12px;font-size:10px;line-height:1.5;animation:mIn .3s var(--ease);}
+@keyframes mIn{from{opacity:0;transform:translateY(4px);}to{opacity:1;transform:none;}}
+.msg-a{background:var(--acS);border:1px solid var(--acB);align-self:flex-start;border-bottom-left-radius:3px;}
+.msg-u{background:var(--sf);border:1px solid var(--bd);align-self:flex-end;border-bottom-right-radius:3px;}
+.typ{display:flex;gap:3px;padding:8px 11px;align-self:flex-start;}.typ span{width:4px;height:4px;border-radius:50%;background:var(--ac);opacity:.3;animation:td 1.4s infinite ease-in-out;}.typ span:nth-child(2){animation-delay:.2s;}.typ span:nth-child(3){animation-delay:.4s;}
+@keyframes td{0%,60%,100%{transform:translateY(0);opacity:.3;}30%{transform:translateY(-3px);opacity:1;}}
+.qr{padding:0 12px 5px;display:flex;gap:3px;flex-wrap:wrap;}
+.qb{padding:4px 9px;border-radius:50px;cursor:pointer;font-family:inherit;font-size:8px;font-weight:500;color:var(--tx2);transition:all .2s;
+  background:rgba(255,255,255,.04);border:0.5px solid rgba(255,255,255,.1);
+  backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);}
+.qb:hover{background:rgba(109,40,217,.08);border-color:rgba(109,40,217,.2);color:var(--ac);}
+[data-theme="light"] .qb{background:rgba(255,255,255,.4);border-color:rgba(255,255,255,.6);}
+.cbar{padding:8px;border-top:1px solid var(--bd);display:flex;gap:5px;}
+.cbar input{flex:1;padding:8px 11px;border-radius:50px;background:var(--sf);border:1px solid var(--bd);color:var(--tx);font-size:10px;font-family:inherit;outline:none;}.cbar input:focus{border-color:var(--ac);}.cbar input::placeholder{color:var(--tx4);}
+.cbar button{width:30px;height:30px;border-radius:50%;background:var(--ac);border:none;color:#fff;cursor:pointer;font-size:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+
+/* Voice */
+.vi{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;border-radius:14px;text-align:center;padding:28px;
+  background:rgba(255,255,255,.04);border:0.5px solid rgba(255,255,255,.1);
+  backdrop-filter:blur(16px) saturate(170%);-webkit-backdrop-filter:blur(16px) saturate(170%);
+  box-shadow:inset 0 0.5px 0 rgba(255,255,255,.08);}
+[data-theme="light"] .vi{background:rgba(255,255,255,.55);border-color:rgba(255,255,255,.7);}
+.vo{width:90px;height:90px;border-radius:50%;cursor:pointer;position:relative;background:radial-gradient(circle,var(--acS) 0%,transparent 70%);display:flex;align-items:center;justify-content:center;margin-bottom:16px;}
+.vo::before{content:'';position:absolute;inset:-5px;border-radius:50%;border:2px solid var(--acB);animation:vp 2s infinite;}
+@keyframes vp{0%,100%{transform:scale(1);opacity:.7;}50%{transform:scale(1.05);opacity:.2;}}
+.vo.on{background:radial-gradient(circle,var(--gnS) 0%,transparent 70%);}
+.vo .voi{font-size:22px;color:var(--ac);}
+.vt{font-size:16px;font-weight:600;}.vd{font-size:10px;color:var(--tx3);max-width:240px;margin-top:3px;}
+.vtx{margin-top:14px;padding:10px 16px;border-radius:10px;background:var(--sf);border:1px solid var(--bd);font-size:10px;color:var(--tx2);max-width:320px;width:100%;display:none;text-align:left;line-height:1.5;}.vtx.show{display:block;animation:mIn .3s var(--ease);}
+
+/* WA */
+.waf{flex:1;border-radius:14px;overflow:hidden;display:flex;flex-direction:column;
+  border:0.5px solid rgba(255,255,255,.1);
+  box-shadow:0 4px 24px rgba(0,0,0,.06),inset 0 0.5px 0 rgba(255,255,255,.08);}
+[data-theme="light"] .waf{border-color:rgba(255,255,255,.7);}
+.wah{padding:9px 12px;background:#075E54;display:flex;align-items:center;gap:7px;}.wah .wav{width:26px;height:26px;border-radius:50%;background:var(--gn);display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:700;color:#fff;}.wah .wan{color:#fff;font-size:11px;font-weight:600;}.wah .was{font-size:8px;color:rgba(255,255,255,.6);}
+.wam{flex:1;padding:12px;overflow-y:auto;display:flex;flex-direction:column;gap:4px;background:var(--bg2);transition:background var(--dur) var(--ease);}
+.wm{max-width:82%;padding:6px 9px;border-radius:7px;font-size:10px;line-height:1.4;animation:mIn .3s;}.wm-in{background:var(--card);align-self:flex-start;border-bottom-left-radius:2px;}.wm-out{background:#DCF8C6;align-self:flex-end;border-bottom-right-radius:2px;}[data-theme="dark"] .wm-out{background:#005C4B;color:#e9edef;}
+.wm .wt{font-size:7px;color:var(--tx3);text-align:right;margin-top:2px;}
+.wab{padding:7px 9px;background:var(--bg2);display:flex;gap:5px;transition:background var(--dur) var(--ease);}.wab input{flex:1;padding:7px 10px;border-radius:50px;background:var(--sf);border:1px solid var(--bd);color:var(--tx);font-size:10px;font-family:inherit;outline:none;}.wab input::placeholder{color:var(--tx4);}.wab button{width:28px;height:28px;border-radius:50%;background:var(--gn);border:none;color:#fff;cursor:pointer;font-size:12px;display:flex;align-items:center;justify-content:center;}
+
+/* Multi */
+.mg{flex:1;display:grid;grid-template-columns:1fr 1fr;gap:6px;}
+.mb{border-radius:10px;overflow:hidden;display:flex;flex-direction:column;
+  background:rgba(255,255,255,.04);border:0.5px solid rgba(255,255,255,.08);
+  backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);
+  box-shadow:inset 0 0.5px 0 rgba(255,255,255,.06);}
+[data-theme="light"] .mb{background:rgba(255,255,255,.5);border-color:rgba(255,255,255,.7);}.mb-l{padding:6px 10px;font-size:8px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--tx3);border-bottom:1px solid var(--bd);}.mb-b{flex:1;padding:8px;display:flex;flex-direction:column;gap:4px;overflow-y:auto;font-size:9px;}.mm{padding:5px 7px;border-radius:6px;line-height:1.4;}.mm-a{background:var(--acS);color:var(--tx2);align-self:flex-start;max-width:90%;}.mm-u{background:var(--sf);color:var(--tx2);align-self:flex-end;max-width:80%;}
+
+.wn{display:flex;justify-content:space-between;margin-top:20px;padding-top:12px;border-top:1px solid var(--bd);}
+.wb{padding:9px 20px;border-radius:50px;font-family:inherit;font-size:11px;font-weight:600;cursor:pointer;transition:all .2s;}
+.wb-b{color:var(--tx2);
+  background:rgba(255,255,255,.04);border:0.5px solid rgba(255,255,255,.1);
+  backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);}
+.wb-b:hover{background:rgba(255,255,255,.08);}
+[data-theme="light"] .wb-b{background:rgba(255,255,255,.45);border-color:rgba(255,255,255,.6);}
+.wb-n{color:#fff;
+  background:linear-gradient(180deg,rgba(109,40,217,.92),rgba(88,28,180,.92));
+  border:0.5px solid rgba(255,255,255,.15);
+  box-shadow:0 2px 8px rgba(109,40,217,.2),inset 0 0.5px 0 rgba(255,255,255,.15);}
+.wb-n:hover{filter:brightness(1.12);box-shadow:0 4px 16px rgba(109,40,217,.25);}
+.wb:disabled{opacity:.3;cursor:not-allowed;}
+
+/* ========= FEATURES ========= */
+.feat-g{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:32px;}
+.feat.tilt-card{padding:24px 20px;border-radius:16px;
+  background:rgba(255,255,255,.04);border:0.5px solid rgba(255,255,255,.08);
+  backdrop-filter:blur(12px) saturate(160%);-webkit-backdrop-filter:blur(12px) saturate(160%);
+  box-shadow:inset 0 0.5px 0 rgba(255,255,255,.08);transition:all .3s var(--ease);}
+.feat:hover{background:rgba(255,255,255,.07);border-color:rgba(255,255,255,.14);transform:translateY(-3px);box-shadow:0 12px 30px rgba(0,0,0,.06),inset 0 0.5px 0 rgba(255,255,255,.1);}
+[data-theme="light"] .feat.tilt-card{background:rgba(255,255,255,.5);border-color:rgba(255,255,255,.7);}
+[data-theme="light"] .feat:hover{background:rgba(255,255,255,.7);}
+.feat:hover{transform:translateY(-3px);}
+.feat-n{font-size:9px;font-weight:800;color:var(--ac);margin-bottom:12px;display:inline-block;padding:3px 8px;border-radius:5px;background:var(--acS);}
+.feat h3{font-size:16px;font-weight:600;margin-bottom:4px;letter-spacing:-.2px;}
+.feat p{font-size:11px;color:var(--tx2);line-height:1.55;}
+
+/* ========= HOW / PRICING / TESTIMONIALS ========= */
+.how-g{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:32px;}
+.how.tilt-card{padding:24px 20px;border-radius:16px;
+  background:rgba(255,255,255,.04);border:0.5px solid rgba(255,255,255,.08);
+  backdrop-filter:blur(12px) saturate(160%);-webkit-backdrop-filter:blur(12px) saturate(160%);
+  box-shadow:inset 0 0.5px 0 rgba(255,255,255,.08);transition:all .3s var(--ease);}
+.how:hover{transform:translateY(-2px);border-color:rgba(255,255,255,.14);}
+[data-theme="light"] .how.tilt-card{background:rgba(255,255,255,.5);border-color:rgba(255,255,255,.7);}
+.how-n{font-size:40px;font-weight:700;color:var(--ac);opacity:.18;line-height:1;}
+.how h3{font-size:16px;font-weight:600;margin:6px 0 4px;letter-spacing:-.2px;}.how p{font-size:11px;color:var(--tx2);line-height:1.55;}
+
+.pr-g{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:32px;}
+.pr.tilt-card{padding:24px 20px;border-radius:16px;position:relative;transition:all .3s;
+  background:rgba(255,255,255,.04);border:0.5px solid rgba(255,255,255,.08);
+  backdrop-filter:blur(16px) saturate(170%);-webkit-backdrop-filter:blur(16px) saturate(170%);
+  box-shadow:inset 0 0.5px 0 rgba(255,255,255,.08);}
+.pr:hover{transform:translateY(-3px);box-shadow:0 12px 30px rgba(0,0,0,.06),inset 0 0.5px 0 rgba(255,255,255,.1);}
+[data-theme="light"] .pr.tilt-card{background:rgba(255,255,255,.55);border-color:rgba(255,255,255,.7);}
+[data-theme="light"] .pr:hover{background:rgba(255,255,255,.7);}
+.pr.pop{border-color:var(--acB);background:var(--acS);}
+.pr.pop::before{content:attr(data-b);position:absolute;top:-8px;left:50%;transform:translateX(-50%);padding:2px 10px;border-radius:50px;background:var(--ac);font-size:8px;font-weight:700;color:#fff;}
+.pr-t{font-size:10px;font-weight:600;color:var(--tx2);text-transform:uppercase;letter-spacing:.8px;}
+.pr-p{font-size:38px;font-weight:700;margin:8px 0 2px;letter-spacing:-1.5px;}.pr-p span{font-size:13px;font-weight:400;color:var(--tx3);}
+.pr-d{font-size:10px;color:var(--tx3);margin-bottom:16px;}
+.pr-l{list-style:none;margin-bottom:18px;}.pr-l li{padding:4px 0;font-size:10px;color:var(--tx2);display:flex;align-items:center;gap:6px;}.pr-l .y{color:var(--gn);font-weight:700;}.pr-l .n{color:var(--tx4);}
+.pr-btn{width:100%;padding:10px;border-radius:50px;font-family:inherit;font-weight:600;font-size:11px;cursor:pointer;transition:all .2s;color:var(--tx);
+  background:rgba(255,255,255,.05);border:0.5px solid rgba(255,255,255,.1);
+  backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);
+  box-shadow:inset 0 0.5px 0 rgba(255,255,255,.08);}
+.pr-btn:hover{background:rgba(255,255,255,.1);}
+[data-theme="light"] .pr-btn{background:rgba(255,255,255,.45);border-color:rgba(255,255,255,.6);}
+.pr.pop .pr-btn{color:#fff;
+  background:linear-gradient(180deg,rgba(109,40,217,.92),rgba(88,28,180,.92));
+  border:0.5px solid rgba(255,255,255,.15);
+  box-shadow:0 2px 8px rgba(109,40,217,.2),inset 0 0.5px 0 rgba(255,255,255,.15);}
+.pr.pop .pr-btn:hover{filter:brightness(1.12);}
+
+.tg{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:32px;}
+.tc.tilt-card{padding:20px;border-radius:16px;
+  background:rgba(255,255,255,.04);border:0.5px solid rgba(255,255,255,.08);
+  backdrop-filter:blur(12px) saturate(160%);-webkit-backdrop-filter:blur(12px) saturate(160%);
+  box-shadow:inset 0 0.5px 0 rgba(255,255,255,.08);transition:all .3s var(--ease);}
+.tc:hover{transform:translateY(-2px);border-color:rgba(255,255,255,.14);}
+[data-theme="light"] .tc.tilt-card{background:rgba(255,255,255,.55);border-color:rgba(255,255,255,.7);}
+.tc-t{font-size:12px;color:var(--tx2);line-height:1.6;font-style:italic;margin-bottom:12px;}
+.tc-a{display:flex;align-items:center;gap:8px;}.tc-av{width:28px;height:28px;border-radius:50%;background:var(--ac);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:#fff;}.tc-nm{font-size:10px;font-weight:600;}.tc-rl{font-size:8px;color:var(--tx3);}
+
+/* ========= SUPPORT ========= */
+#support{background:var(--bg2);transition:background var(--dur) var(--ease);}
+.sup-g{display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-top:32px;align-items:start;}
+.sup-i h3{font-size:18px;font-weight:600;margin-bottom:8px;}.sup-i p{font-size:11px;color:var(--tx2);line-height:1.6;margin-bottom:14px;}
+.sch-list{display:flex;flex-direction:column;gap:6px;}
+.sch{padding:12px 14px;border-radius:12px;display:flex;align-items:center;gap:10px;transition:all .2s;cursor:pointer;
+  background:rgba(255,255,255,.04);border:0.5px solid rgba(255,255,255,.08);
+  backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);
+  box-shadow:inset 0 0.5px 0 rgba(255,255,255,.06);}
+.sch:hover{border-color:rgba(255,255,255,.14);transform:translateX(3px);background:rgba(255,255,255,.07);}
+[data-theme="light"] .sch{background:rgba(255,255,255,.5);border-color:rgba(255,255,255,.7);}
+[data-theme="light"] .sch:hover{background:rgba(255,255,255,.7);}
+.sch-i{width:32px;height:32px;border-radius:7px;background:var(--acS);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;color:var(--ac);}.sch-t{font-size:11px;font-weight:600;}.sch-d{font-size:9px;color:var(--tx3);}
+.cfrm{padding:24px;border-radius:16px;
+  background:rgba(255,255,255,.04);border:0.5px solid rgba(255,255,255,.08);
+  backdrop-filter:blur(16px) saturate(170%);-webkit-backdrop-filter:blur(16px) saturate(170%);
+  box-shadow:inset 0 0.5px 0 rgba(255,255,255,.08);}
+[data-theme="light"] .cfrm{background:rgba(255,255,255,.6);border-color:rgba(255,255,255,.7);}
+.cfrm h3{font-size:16px;font-weight:600;margin-bottom:2px;}.cfrm .cs{font-size:10px;color:var(--tx3);margin-bottom:14px;}
+.cfg{display:grid;grid-template-columns:1fr 1fr;gap:8px;}.cfgi{display:flex;flex-direction:column;gap:2px;}.cfgi.full{grid-column:1/-1;}
+.cfl{font-size:8px;font-weight:600;color:var(--tx3);text-transform:uppercase;letter-spacing:.4px;}
+.cfi{padding:9px 11px;border-radius:10px;color:var(--tx);font-size:11px;font-family:inherit;outline:none;transition:all .2s;
+  background:rgba(255,255,255,.04);border:0.5px solid rgba(255,255,255,.1);
+  backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);}
+.cfi:focus{border-color:var(--ac);box-shadow:0 0 0 3px rgba(109,40,217,.08);}
+.cfi::placeholder{color:var(--tx4);}
+[data-theme="light"] .cfi{background:rgba(255,255,255,.5);border-color:rgba(0,0,0,.08);}
+textarea.cfi{resize:vertical;min-height:60px;}
+.cf-btn{margin-top:12px;width:100%;padding:11px;border-radius:50px;color:#fff;font-weight:700;font-size:11px;cursor:pointer;font-family:inherit;transition:all .2s;
+  background:linear-gradient(180deg,rgba(109,40,217,.92),rgba(88,28,180,.92));
+  border:0.5px solid rgba(255,255,255,.15);
+  box-shadow:0 2px 8px rgba(109,40,217,.2),inset 0 0.5px 0 rgba(255,255,255,.15);}
+.cf-btn:hover{filter:brightness(1.12);box-shadow:0 4px 16px rgba(109,40,217,.25);}
+
+
+/* FAQ */
+.faq-item{margin-bottom:8px;border-radius:14px;overflow:hidden;
+  background:rgba(255,255,255,.04);border:0.5px solid rgba(255,255,255,.08);
+  backdrop-filter:blur(12px) saturate(160%);-webkit-backdrop-filter:blur(12px) saturate(160%);
+  box-shadow:inset 0 0.5px 0 rgba(255,255,255,.06);transition:all .3s var(--ease);}
+[data-theme="light"] .faq-item{background:rgba(255,255,255,.5);border-color:rgba(255,255,255,.7);}
+.faq-item[open]{border-color:var(--acB);background:var(--acS);}
+.faq-item summary{padding:18px 22px;font-size:14px;font-weight:600;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;transition:color .2s;}
+.faq-item summary::-webkit-details-marker{display:none;}
+.faq-item summary::after{content:'+';font-size:20px;font-weight:300;color:var(--tx3);transition:transform .3s var(--ease);}
+.faq-item[open] summary::after{transform:rotate(45deg);color:var(--ac);}
+.faq-item summary:hover{color:var(--ac);}
+.faq-item p{padding:0 22px 18px;font-size:13px;color:var(--tx2);line-height:1.65;}
+.faq-item a{color:var(--ac);text-decoration:none;font-weight:600;}.faq-item a:hover{text-decoration:underline;}
+
+/* ========= CTA ========= */
+.cta-s{text-align:center;padding:100px 24px;position:relative;overflow:hidden;}
+.cta-bg{position:absolute;inset:0;background:var(--heroGrad);opacity:.4;z-index:0;transition:background .6s var(--ease);}
+.cta-c{position:relative;z-index:2;max-width:700px;margin:0 auto;padding:56px 40px;border-radius:24px;
+  background:rgba(255,255,255,.05);border:0.5px solid rgba(255,255,255,.1);
+  backdrop-filter:blur(24px) saturate(180%);-webkit-backdrop-filter:blur(24px) saturate(180%);
+  box-shadow:0 8px 40px rgba(0,0,0,.06),inset 0 0.5px 0 rgba(255,255,255,.1);}
+[data-theme="light"] .cta-c{background:rgba(255,255,255,.5);border-color:rgba(255,255,255,.7);}
+.cta-c h2{font-size:clamp(24px,3.5vw,36px);font-weight:600;letter-spacing:-.8px;}.cta-c p{color:var(--tx2);margin:10px 0 22px;font-size:14px;}
+
+/* Brand huge */
+.bh{text-align:center;padding:50px 24px 16px;position:relative;z-index:2;}
+.bh span{font-size:clamp(50px,11vw,140px);font-weight:700;letter-spacing:-3px;display:block;line-height:1;
+  color:transparent;-webkit-text-stroke:1.5px rgba(255,255,255,.08);
+  background:linear-gradient(180deg,rgba(167,139,250,.08),rgba(109,40,217,.03));
+  -webkit-background-clip:text;background-clip:text;
+  filter:drop-shadow(0 0 40px rgba(109,40,217,.04));}
+[data-theme="light"] .bh span{-webkit-text-stroke:1.5px rgba(0,0,0,.06);background:linear-gradient(180deg,rgba(109,40,217,.06),rgba(109,40,217,.02));-webkit-background-clip:text;background-clip:text;}
+
+footer{position:relative;z-index:2;padding:28px 24px;border-top:1px solid var(--bd);text-align:center;transition:border-color var(--dur) var(--ease);}
+footer p{font-size:10px;color:var(--tx4);}footer a{color:var(--tx3);text-decoration:none;}
+
+/* ========= RESPONSIVE ========= */
+@media(max-width:1000px){.s-card{grid-template-columns:1fr;}.s-visual{min-height:280px;}.float-card{display:none;}.hero-blob{width:300px;height:300px;}}
+@media(max-width:900px){.dp{grid-template-columns:1fr;}.dpt{flex-direction:row;overflow-x:auto;}.dp-cta{display:none;}.feat-g,.how-g,.pr-g,.tg{grid-template-columns:1fr;}.mg{grid-template-columns:1fr;}.sup-g{grid-template-columns:1fr;}.ig{grid-template-columns:repeat(3,1fr);}.fg,.cfg{grid-template-columns:1fr;}nav{padding:0 14px;}.n-links{display:none;}.manifesto .manifesto-content{margin:0 auto;}}
+@media(max-width:480px){.ig{grid-template-columns:repeat(2,1fr);}.hero-stats{flex-direction:column;}.hs{border-radius:0!important;}.hs:first-child{border-radius:12px 12px 0 0!important;}.hs:last-child{border-radius:0 0 12px 12px!important;}}
+
+/* Hero stats */
+.hero-stats{display:inline-flex;gap:0;margin-top:44px;border-radius:16px;overflow:hidden;animation:fadeUp .6s var(--ease) .75s both;
+  background:rgba(255,255,255,.03);border:0.5px solid rgba(255,255,255,.08);
+  backdrop-filter:blur(20px) saturate(180%);-webkit-backdrop-filter:blur(20px) saturate(180%);
+  box-shadow:0 4px 24px rgba(0,0,0,.06),inset 0 0.5px 0 rgba(255,255,255,.08);}
+[data-theme="light"] .hero-stats{background:rgba(255,255,255,.45);border-color:rgba(255,255,255,.6);}
+.hs{padding:22px 40px;text-align:center;border-right:0.5px solid rgba(255,255,255,.06);position:relative;}
+.hs:last-child{border-right:none;}
+[data-theme="light"] .hs{border-right-color:rgba(0,0,0,.05);}
+.hs-v{font-size:26px;font-weight:700;color:var(--ac);letter-spacing:-.5px;}
+.hs-l{font-size:9px;color:var(--tx3);margin-top:2px;font-weight:600;text-transform:uppercase;letter-spacing:1.2px;}
+
+/* ========= SUB-PAGES (inline) ========= */
+.subpage{display:none;position:fixed;inset:0;z-index:10000;overflow-y:auto;
+  background:var(--bg);transition:background var(--dur) var(--ease);}
+.subpage.open{display:block;animation:pageIn .4s var(--ease);}
+@keyframes pageIn{from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:none;}}
+.sp-wrap{max-width:800px;margin:0 auto;padding:80px 24px 60px;}
+.sp-wrap h1{font-size:clamp(28px,4vw,42px);font-weight:600;letter-spacing:-1.2px;line-height:1.15;margin-bottom:16px;}
+.sp-wrap h2{font-size:clamp(20px,3vw,28px);font-weight:600;letter-spacing:-.6px;margin:40px 0 12px;}
+.sp-wrap h3{font-size:18px;font-weight:600;margin:28px 0 8px;}
+.sp-wrap p,.sp-wrap li{font-size:15px;color:var(--tx2);line-height:1.7;margin-bottom:12px;}
+.sp-wrap ul{padding-left:20px;margin-bottom:16px;}
+.sp-wrap a{color:var(--ac);}
+.sp-close{position:fixed;top:14px;right:24px;z-index:10001;width:36px;height:36px;border-radius:50%;cursor:pointer;
+  display:flex;align-items:center;justify-content:center;font-size:18px;color:var(--tx2);
+  background:rgba(255,255,255,.06);border:0.5px solid rgba(255,255,255,.1);
+  backdrop-filter:blur(16px) saturate(180%);-webkit-backdrop-filter:blur(16px) saturate(180%);
+  box-shadow:0 2px 12px rgba(0,0,0,.08),inset 0 0.5px 0 rgba(255,255,255,.1);
+  transition:all .2s;}
+[data-theme="light"] .sp-close{background:rgba(255,255,255,.6);border-color:rgba(255,255,255,.8);}
+.sp-close:hover{color:var(--tx);transform:scale(1.1);}
+.sp-bc{font-size:12px;color:var(--tx3);margin-bottom:24px;}.sp-bc a{color:var(--tx2);text-decoration:none;cursor:pointer;}.sp-bc a:hover{color:var(--ac);}
+.sp-updated{font-size:12px;color:var(--tx3);margin-bottom:32px;}
+.sp-glass{padding:32px;border-radius:20px;margin:32px 0;
+  background:rgba(255,255,255,.04);border:0.5px solid rgba(255,255,255,.08);
+  backdrop-filter:blur(16px) saturate(170%);-webkit-backdrop-filter:blur(16px) saturate(170%);
+  box-shadow:inset 0 0.5px 0 rgba(255,255,255,.08);}
+[data-theme="light"] .sp-glass{background:rgba(255,255,255,.55);border-color:rgba(255,255,255,.7);}
+.sp-back{display:inline-flex;align-items:center;gap:6px;padding:12px 24px;border-radius:50px;font-size:13px;font-weight:600;cursor:pointer;margin-top:24px;color:#fff;border:none;font-family:inherit;
+  background:linear-gradient(180deg,rgba(109,40,217,.92),rgba(88,28,180,.92));
+  border:0.5px solid rgba(255,255,255,.15);
+  box-shadow:0 2px 8px rgba(109,40,217,.2);transition:all .2s;}
+.sp-back:hover{filter:brightness(1.1);transform:translateY(-1px);}
+.val-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:24px 0;}
+.val-card{padding:24px;border-radius:16px;
+  background:rgba(255,255,255,.04);border:0.5px solid rgba(255,255,255,.08);
+  backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+  box-shadow:inset 0 0.5px 0 rgba(255,255,255,.06);}
+[data-theme="light"] .val-card{background:rgba(255,255,255,.5);border-color:rgba(255,255,255,.7);}
+.val-card h3{margin:0 0 6px;font-size:16px;}.val-card p{font-size:13px;margin:0;}
+@media(max-width:600px){.val-grid{grid-template-columns:1fr;}}
+
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"LayerAI","applicationCategory":"BusinessApplication","description":"AI-powered customer support automation platform for small businesses. Handles chat, voice, WhatsApp, and email across 12+ industries.","operatingSystem":"Web","offers":{"@type":"AggregateOffer","lowPrice":"49","highPrice":"399","priceCurrency":"USD","offerCount":"3"},"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.8","ratingCount":"127","bestRating":"5"},"author":{"@type":"Organization","name":"LayerAI","url":"https://layerai.com"}}
+</script>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+<div class="n-left"><div class="n-brand">LayerAI</div><div class="n-links"><a class="n-link" href="#wizard">Demo</a><a class="n-link" href="#features">Features</a><a class="n-link" href="#pricing">Pricing</a><a class="n-link" href="#support">Support</a><a class="n-link" href="#faq">FAQ</a></div></div>
+<div class="n-right">
+  <div class="n-ctrl"><select id="langSel" onchange="sLang(this.value)"><option value="en">EN</option><option value="es">ES</option><option value="pt">PT</option><option value="tr">TR</option><option value="ru">RU</option><option value="az">AZ</option></select></div>
+  <button class="n-ctrl" onclick="tTheme()" id="thBtn">Dark</button>
+  <a class="n-cta" href="#wizard">Get LayerAI</a>
+</div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+<div class="hero-bg"></div>
+<div class="fireflies" aria-hidden="true"></div>
+<div class="hero-blob"><div class="blob-wrap">
+  <div class="blob-shape blob-1"></div>
+  <div class="blob-shape blob-2"></div>
+  <div class="blob-shape blob-3"></div>
+  <div class="blob-shape blob-4"></div>
+  <div class="blob-shape blob-5"></div>
+  <div class="blob-shape blob-6"></div>
+</div></div>
+
+
+<!-- Floating UI cards -->
+<div class="float-card fc-1">
+  <div class="fc-label">AI Assistant</div>
+  <div class="fc-msg">Looks like you have 3 missed inquiries about dental appointments. Would you like me to respond?</div>
+  <div class="fc-bubble user" style="margin-top:8px;">Yes, book them all</div>
+  <div class="fc-row"><div class="fc-chip">Mon 3:00 PM</div><div class="fc-chip">Tue 1:00 PM</div></div>
+</div>
+
+<div class="float-card fc-2">
+  <div class="fc-label">Team workspace</div>
+  <div class="fc-msg" style="font-weight:600;color:var(--tx);margin-bottom:6px;">Customer Support Dashboard</div>
+  <div class="fc-msg">AI resolved 847 conversations this week. Average response time: 2.3 seconds. Customer satisfaction: 94%.</div>
+</div>
+
+<div class="float-card fc-3">
+  <div class="fc-inbox-row"><span class="fc-inbox-name">Sarah Kim</span> Appointment confirmed for Thursday</div>
+  <div class="fc-inbox-row"><span class="fc-inbox-name">James Patel</span> Insurance verification complete</div>
+  <div class="fc-inbox-row"><span class="fc-inbox-name">Laura Chen</span> Rescheduled to next Monday</div>
+  <div class="fc-inbox-row"><span class="fc-inbox-name">HR Team</span> Monthly support report ready</div>
+</div>
+
+<div class="float-card fc-4">
+  <div class="fc-bubble">Schedule 15 minutes for a quick follow-up with the VIP client</div>
+</div>
+
+<div class="hero-content">
+  <div class="hero-pill"><span class="dot"></span> <span data-i18n="hp">Now serving 12 industries</span></div>
+  <h1 data-i18n="h1">Your business works.<br>Now make it think.</h1>
+  <p class="hero-sub" data-i18n="hs">Pick your industry. Enter your details. Watch your AI assistant come alive in 60 seconds — handling chat, voice, WhatsApp, and email. No code. No contracts. Try it free before you commit.</p>
+  <div class="hero-btns"><a href="#wizard" class="btn-main" data-i18n="hc1">Get LayerAI</a><a href="#pricing" class="btn-ghost" data-i18n="hc2">View Pricing</a></div>
+  <div class="hero-stats">
+    <div class="hs"><div class="hs-v">73%</div><div class="hs-l">Auto-resolved</div></div>
+    <div class="hs"><div class="hs-v">&lt;3s</div><div class="hs-l">Response</div></div>
+    <div class="hs"><div class="hs-v">24/7</div><div class="hs-l">Always On</div></div>
+    <div class="hs"><div class="hs-v">40+</div><div class="hs-l">Languages</div></div>
+  </div>
+</div>
+</section>
+
+<!-- TRUST -->
+<div class="trust reveal"><div class="trust-lbl">Trusted by 500+ businesses across 12 industries in 30 countries</div><div class="trust-row"><span class="trust-logo">ATLASSIAN</span><span class="trust-logo">HubSpot</span><span class="trust-logo">Brex</span><span class="trust-logo">DOORDASH</span><span class="trust-logo">RIVIAN</span><span class="trust-logo">eventbrite</span></div></div>
+
+
+<!-- NUMBERS THAT MATTER -->
+<section style="padding:80px 24px;"><div class="container"><div class="reveal" style="text-align:center;">
+<div class="sec-ey">By The Numbers</div>
+<div class="sec-h" style="margin:0 auto;">Results that speak louder<br>than any sales pitch.</div>
+<p class="sec-p" style="margin:12px auto 0;">Real metrics from real businesses using LayerAI right now.</p>
+</div>
+<div style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:40px;" class="reveal stagger">
+<div class="feat" style="text-align:center;"><div style="font-size:36px;font-weight:700;color:var(--ac);letter-spacing:-1px;">2.4M+</div><div style="font-size:12px;font-weight:600;margin-top:4px;">Conversations handled</div><div style="font-size:10px;color:var(--tx3);margin-top:2px;">across all industries this year</div></div>
+<div class="feat" style="text-align:center;"><div style="font-size:36px;font-weight:700;color:var(--ac);letter-spacing:-1px;">94%</div><div style="font-size:12px;font-weight:600;margin-top:4px;">Customer satisfaction</div><div style="font-size:10px;color:var(--tx3);margin-top:2px;">average across all deployments</div></div>
+<div class="feat" style="text-align:center;"><div style="font-size:36px;font-weight:700;color:var(--ac);letter-spacing:-1px;">12</div><div style="font-size:12px;font-weight:600;margin-top:4px;">Industry templates</div><div style="font-size:10px;color:var(--tx3);margin-top:2px;">pre-built and ready to deploy</div></div>
+<div class="feat" style="text-align:center;"><div style="font-size:36px;font-weight:700;color:var(--ac);letter-spacing:-1px;">40+</div><div style="font-size:12px;font-weight:600;margin-top:4px;">Languages supported</div><div style="font-size:10px;color:var(--tx3);margin-top:2px;">automatic detection and response</div></div>
+</div></div></section>
+
+<!-- SUITE -->
+<section class="suite"><div class="container">
+<div class="suite-hdr reveal"><h2>Your LayerAI suite</h2><a href="#wizard" class="s-cta">Get the suite</a></div>
+<div class="s-tabs reveal"><button class="s-tab on" onclick="sTab(0,this)">Chat</button><button class="s-tab" onclick="sTab(1,this)">Voice</button><button class="s-tab" onclick="sTab(2,this)">Channels</button><button class="s-tab" onclick="sTab(3,this)">Analytics</button></div>
+<div class="s-panel on sv-1 reveal" id="sp0"><div class="s-card"><div class="s-text"><div class="s-badge">Chat</div><div class="s-title">The most intelligent<br>chat assistant ever made</div><div class="s-desc">Embed an AI assistant on your website that understands your business inside and out. It answers questions, books appointments, qualifies leads, and converts visitors into customers — 24 hours a day, 7 days a week, in 40+ languages.</div><a href="#wizard" class="s-link">Try a live demo &#8594;</a><ul class="s-features"><li><span class="ck"></span> Respond faster to what matters most</li><li><span class="ck"></span> Follow up on time, every time</li><li><span class="ck"></span> Write with AI that sounds like you</li><li><span class="ck"></span> Save 4 hours every single week</li></ul></div><div class="s-visual"><div class="s-visual-bg"></div><div class="s-mockup"><div class="sm-top"><div class="sm-dot sm-r"></div><div class="sm-dot sm-y"></div><div class="sm-dot sm-g"></div></div><div class="sm-body"><div class="sm-chat-row"><div class="sm-ava"></div><div class="sm-bub">Welcome to Sunrise Medical. How can I help you today?</div></div><div class="sm-chat-row"><div class="sm-bub u">I need to book a dental cleaning</div></div><div class="sm-chat-row"><div class="sm-ava"></div><div class="sm-bub">I have openings tomorrow at 10 AM and Wednesday at 2:30 PM. Which works better?</div></div><div class="sm-chat-row"><div class="sm-bub u">Tomorrow works</div></div><div class="sm-chat-row"><div class="sm-ava"></div><div class="sm-bub">Confirmed for tomorrow at 10 AM. You will receive an SMS reminder. Anything else?</div></div></div></div></div></div></div>
+<div class="s-panel sv-2" id="sp1"><div class="s-card"><div class="s-text"><div class="s-badge">Voice</div><div class="s-title">AI voice that sounds<br>like your best employee</div><div class="s-desc">Real-time voice AI powered by Deepgram and ElevenLabs. When customers call your business, AI picks up instantly — no hold music, no voicemail, no missed opportunities. Natural conversation that books, answers, and transfers when needed.</div><a href="#wizard" class="s-link">Experience voice &#8594;</a><ul class="s-features"><li><span class="ck"></span> Never miss a phone call again</li><li><span class="ck"></span> Works in 40+ languages naturally</li><li><span class="ck"></span> Transfers to humans when needed</li><li><span class="ck"></span> Sub-second response latency</li></ul></div><div class="s-visual"><div class="s-visual-bg"></div><div class="s-mockup"><div class="sm-top"><div class="sm-dot sm-r"></div><div class="sm-dot sm-y"></div><div class="sm-dot sm-g"></div></div><div class="sm-body" style="text-align:center;padding:40px 20px;"><div style="width:60px;height:60px;border-radius:50%;background:var(--acS);display:flex;align-items:center;justify-content:center;margin:0 auto 12px;font-size:22px;color:var(--ac);">&#9742;</div><div style="font-size:14px;font-weight:600;">Incoming call...</div><div style="font-size:10px;color:var(--tx3);margin-top:4px;">AI answering in under 1 second</div><div style="margin-top:16px;display:flex;gap:8px;justify-content:center;"><div style="padding:6px 16px;border-radius:50px;background:var(--gn);color:#fff;font-size:10px;font-weight:600;">Accept</div><div style="padding:6px 16px;border-radius:50px;background:var(--sf);border:1px solid var(--bd);font-size:10px;color:var(--tx2);">Transfer</div></div></div></div></div></div></div>
+<div class="s-panel sv-3" id="sp2"><div class="s-card"><div class="s-text"><div class="s-badge">Channels</div><div class="s-title">The all-in-one AI<br>workspace for support</div><div class="s-desc">Your customers are on WhatsApp, Instagram, email, and your website. Now your AI is too — with one unified brain and one dashboard. Every conversation synced, every response consistent, every channel covered.</div><a href="#wizard" class="s-link">See channels &#8594;</a><ul class="s-features"><li><span class="ck"></span> Connect all channels instantly</li><li><span class="ck"></span> Unified inbox for your team</li><li><span class="ck"></span> Consistent AI everywhere</li><li><span class="ck"></span> Smart routing by urgency</li></ul></div><div class="s-visual"><div class="s-visual-bg"></div><div class="s-mockup"><div class="sm-top"><div class="sm-dot sm-r"></div><div class="sm-dot sm-y"></div><div class="sm-dot sm-g"></div></div><div class="sm-tabs"><div class="sm-tab on">Important 12</div><div class="sm-tab">Calendar 3</div><div class="sm-tab">WhatsApp 8</div><div class="sm-tab">Email 19</div></div><div><div class="sm-row"><span class="sm-row-name">Sarah Kim</span> Appointment rescheduled to Thursday</div><div class="sm-row"><span class="sm-row-name">James Patel</span> Insurance question via WhatsApp</div><div class="sm-row"><span class="sm-row-name">Laura Chen</span> Follow-up email sent automatically</div><div class="sm-row"><span class="sm-row-name">Mike Torres</span> VIP escalation from Instagram</div><div class="sm-row"><span class="sm-row-name">HR Team</span> Monthly support metrics ready</div></div></div></div></div></div>
+<div class="s-panel sv-4" id="sp3"><div class="s-card"><div class="s-text"><div class="s-badge">Analytics</div><div class="s-title">AI that actually works<br>in every metric you track</div><div class="s-desc">See exactly what your AI is doing and how it is performing. Track conversation volumes, resolution rates, customer sentiment, most common questions, and direct revenue attribution — all updating in real time.</div><a href="#wizard" class="s-link">Explore analytics &#8594;</a><ul class="s-features"><li><span class="ck"></span> See what customers ask most</li><li><span class="ck"></span> Track resolution rates live</li><li><span class="ck"></span> Measure revenue from AI</li><li><span class="ck"></span> Export data via API</li></ul></div><div class="s-visual"><div class="s-visual-bg"></div><div class="s-mockup"><div class="sm-top"><div class="sm-dot sm-r"></div><div class="sm-dot sm-y"></div><div class="sm-dot sm-g"></div></div><div class="sm-body"><div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:10px;"><div style="padding:10px;border-radius:8px;background:var(--acS);border:1px solid var(--acB);"><div style="font-size:8px;font-weight:700;color:var(--ac);">RESOLVED</div><div style="font-size:24px;font-weight:700;margin-top:2px;">73%</div></div><div style="padding:10px;border-radius:8px;background:var(--gnS);border:1px solid rgba(22,163,74,.1);"><div style="font-size:8px;font-weight:700;color:var(--gn);">AVG TIME</div><div style="font-size:24px;font-weight:700;margin-top:2px;">2.4s</div></div></div><div style="padding:10px;border-radius:8px;background:var(--sf);border:1px solid var(--bd);"><div style="font-size:8px;font-weight:700;color:var(--tx3);">DAILY CONVERSATIONS</div><div style="display:flex;align-items:flex-end;gap:3px;height:50px;margin-top:6px;"><div style="flex:1;background:var(--ac);border-radius:2px;height:35%;opacity:.3;"></div><div style="flex:1;background:var(--ac);border-radius:2px;height:50%;opacity:.4;"></div><div style="flex:1;background:var(--ac);border-radius:2px;height:60%;opacity:.5;"></div><div style="flex:1;background:var(--ac);border-radius:2px;height:45%;opacity:.4;"></div><div style="flex:1;background:var(--ac);border-radius:2px;height:75%;opacity:.6;"></div><div style="flex:1;background:var(--ac);border-radius:2px;height:65%;opacity:.5;"></div><div style="flex:1;background:var(--ac);border-radius:2px;height:100%;"></div></div></div></div></div></div></div></div>
+</div></section>
+
+<!-- MANIFESTO -->
+<div class="manifesto reveal"><div class="manifesto-bg"><div class="manifesto-art"></div><div class="m-orb1"></div><div class="m-orb2"></div><div class="m-orb3"></div><div class="m-ring1"></div><div class="m-ring2"></div></div><div class="manifesto-content"><div class="sec-ey" style="margin-bottom:14px;">Our Mission</div><h2>Becoming LayerAI.</h2><p>When AI handles every customer touchpoint, something shifts. Response times drop from hours to seconds. Satisfaction scores climb. Your team stops drowning in repetitive questions and starts doing the work that actually matters — building relationships, closing deals, creating value. Before you know it, you have the time to be strategic instead of reactive. That is what every business deserves.</p><a href="#about" onclick="event.preventDefault();openPage('pg-about')" class="btn-main" style="margin-top:16px;">Read our mission</a></div></div>
+
+<!-- WIZARD -->
+<section id="wizard"><div class="container"><div class="reveal"><div class="sec-ey">Interactive Demo</div><div class="sec-h">Build your AI assistant<br>in 60 seconds.</div><p class="sec-p">No sign-up required. Pick your industry, enter your business details, and watch a fully personalized AI assistant come alive — complete with chat, voice, and WhatsApp demos you can actually interact with.</p></div>
+<div class="wiz reveal"><div class="wiz-hd"><div class="wd on" id="d1">1</div><div class="wl" id="l1"></div><div class="wd" id="d2">2</div><div class="wl" id="l2"></div><div class="wd" id="d3">3</div><div class="wl" id="l3"></div><div class="wd" id="d4">4</div></div>
+<div class="wiz-bd">
+<div class="wp on" id="p1"><div class="wpt">What industry is your business in?</div><p class="wpd">We will pre-configure AI with industry knowledge.</p><div class="ig" id="iG"></div><div class="wn"><div></div><button class="wb wb-n" id="b1n" disabled onclick="goS(2)">Continue</button></div></div>
+<div class="wp" id="p2"><div class="wpt">Tell us about your business</div><p class="wpd">The more you share, the smarter your demo.</p><div class="fg"><div class="fgi"><label class="fl">Business Name</label><input class="fi" id="fN" placeholder="e.g. Sunrise Medical"></div><div class="fgi"><label class="fl">Website</label><input class="fi" id="fU" placeholder="https://"></div><div class="fgi"><label class="fl">Phone</label><input class="fi" id="fP" placeholder="+1 555 000 0000"></div><div class="fgi"><label class="fl">Hours</label><input class="fi" id="fH" placeholder="Mon-Fri 9am-6pm"></div><div class="fgi full"><label class="fl">Services</label><div class="svcs" id="svc"></div></div><div class="fgi full"><label class="fl">Tone</label><div class="tone-row"><div class="to sel" onclick="pT(this)">Professional</div><div class="to" onclick="pT(this)">Friendly</div><div class="to" onclick="pT(this)">Casual</div></div></div></div><div class="wn"><button class="wb wb-b" onclick="goS(1)">Back</button><button class="wb wb-n" onclick="goS(3)">Build My AI</button></div></div>
+<div class="wp" id="p3"><div class="bld"><div class="bld-sp"></div><div class="wpt">Building your AI...</div><p class="wpd" id="bN"></p><div class="bld-l" id="bL"><div class="bli" id="bi1"><span>&#9675;</span> Analyzing industry</div><div class="bli" id="bi2"><span>&#9675;</span> Loading business info</div><div class="bli" id="bi3"><span>&#9675;</span> Training AI</div><div class="bli" id="bi4"><span>&#9675;</span> Configuring channels</div><div class="bli" id="bi5"><span>&#9675;</span> Ready</div></div></div></div>
+<div class="wp" id="p4"><div class="dp"><div class="dpt"><div class="dt on" onclick="sD('c',this)"><div class="dti">C</div><div><div class="dtn">Chat</div><div class="dts">Widget</div></div></div><div class="dt" onclick="sD('v',this)"><div class="dti">V</div><div><div class="dtn">Voice</div><div class="dts">Call AI</div></div></div><div class="dt" onclick="sD('w',this)"><div class="dti">W</div><div><div class="dtn">WhatsApp</div><div class="dts">Preview</div></div></div><div class="dt" onclick="sD('m',this)"><div class="dti">A</div><div><div class="dtn">All</div><div class="dts">Channels</div></div></div><div class="dp-cta"><div class="dct">Ready to go live?</div><div class="dcs">Deploys in 5 minutes</div><button onclick="document.getElementById('support').scrollIntoView({behavior:'smooth'})">Start Free Trial</button></div></div>
+<div class="dpp on" id="xC"><div class="cf"><div class="cf-t"><div class="cf-av" id="cA">AI</div><div><div class="cf-nm" id="cN">Business</div><div class="cf-st">Online</div></div></div><div class="cf-ms" id="cM"></div><div class="qr" id="cQ"></div><div class="cbar"><input id="cI" placeholder="Type a message..." onkeydown="if(event.key==='Enter')sC()"><button onclick="sC()">&#8593;</button></div></div></div>
+<div class="dpp" id="xV"><div class="vi"><div class="vo" id="vO" onclick="tV()"><span class="voi">&#9742;</span></div><div class="vt" id="vTi">Tap to call your AI</div><div class="vd" id="vDe">Experience voice interaction</div><div class="vtx" id="vTx"></div></div></div>
+<div class="dpp" id="xW"><div class="waf"><div class="wah"><div class="wav">AI</div><div><div class="wan" id="wN">Business</div><div class="was">online</div></div></div><div class="wam" id="wM"></div><div class="wab"><input id="wI" placeholder="Type a message" onkeydown="if(event.key==='Enter')sW()"><button onclick="sW()">&#8593;</button></div></div></div>
+<div class="dpp" id="xM"><div class="mg"><div class="mb"><div class="mb-l">Website</div><div class="mb-b" id="mC"></div></div><div class="mb"><div class="mb-l">WhatsApp</div><div class="mb-b" id="mW"></div></div><div class="mb"><div class="mb-l">Email</div><div class="mb-b" id="mE"></div></div><div class="mb"><div class="mb-l">Instagram</div><div class="mb-b" id="mI"></div></div></div></div>
+</div></div>
+</div></div>
+</div></section>
+
+<!-- FEATURES -->
+<section id="features"><div class="container"><div class="reveal"><div class="sec-ey">Capabilities</div><div class="sec-h">One layer.<br>Every problem solved.</div><p class="sec-p">LayerAI does not replace your tools — it makes every customer touchpoint smarter, faster, and always-on.</p></div><div class="feat-g reveal stagger"><div class="feat"><div class="feat-n">01</div><h3>Never miss a lead</h3><p>Your AI responds to every inquiry in under 3 seconds — across WhatsApp, website chat, Instagram DMs, and email. Even at 3 AM on a Sunday. Especially at 3 AM on a Sunday.</p></div><div class="feat"><div class="feat-n">02</div><h3>Stop repeating yourself</h3><p>Hours, pricing, directions, availability — AI handles the questions you answer 50 times a day. Your team focuses on what actually moves the needle.</p></div><div class="feat"><div class="feat-n">03</div><h3>Book while you sleep</h3><p>AI schedules appointments, sends confirmations, handles rescheduling, and follows up with reminders. Your calendar fills itself while you focus on running your business.</p></div><div class="feat"><div class="feat-n">04</div><h3>Know what is working</h3><p>Real-time dashboard showing every conversation, conversion rate, customer sentiment score, and revenue impact. Data you can actually use, not just data you can look at.</p></div><div class="feat"><div class="feat-n">05</div><h3>Speaks every language</h3><p>Automatic multi-language support in 40+ languages. A customer writes in Arabic, AI responds in Arabic. Writes in Portuguese, responds in Portuguese. No configuration needed.</p></div><div class="feat"><div class="feat-n">06</div><h3>Smart escalation</h3><p>AI knows when to hand off. Complex issues, VIP customers, frustrated tones — these get routed to your team with full conversation context. No customer ever feels stuck talking to a wall.</p></div></div></div></section>
+
+<!-- HOW -->
+<section><div class="container"><div class="reveal"><div class="sec-ey">Setup</div><div class="sec-h">Live in 5 minutes.<br>Not 5 months.</div><p class="sec-p">No developers. No IT department. No six-month integration project. Just you and a browser.</p></div><div class="how-g reveal stagger"><div class="how"><div class="how-n">01</div><h3>Pick your industry</h3><p>Choose from 12 pre-built industry templates — medical, legal, real estate, gaming, restaurants, and more. Or paste your website URL and let AI extract your services, hours, and FAQs automatically.</p></div><div class="how"><div class="how-n">02</div><h3>Teach it your business</h3><p>Add your services, pricing, business hours, and tone preferences. The more you share, the smarter it gets. Most businesses are live within 5 minutes of signing up.</p></div><div class="how"><div class="how-n">03</div><h3>Go live everywhere</h3><p>Deploy across your website, WhatsApp, Instagram, and email with one click. Monitor everything from a single dashboard. Tweak responses, review analytics, and watch your business run itself.</p></div></div></div></section>
+
+<!-- PRICING -->
+<section id="pricing"><div class="container"><div class="reveal" style="text-align:center;"><div class="sec-ey">Pricing</div><div class="sec-h" style="margin:0 auto;">Simple plans. Cancel anytime.</div><p class="sec-p" style="margin:8px auto 0;">14-day free trial. No credit card.</p></div><div class="pr-g reveal stagger"><div class="pr"><div class="pr-t">Starter</div><div class="pr-p">$49<span>/mo</span></div><div class="pr-d">Perfect for solo businesses and freelancers testing AI support.</div><ul class="pr-l"><li><span class="y">+</span>500 conversations/mo</li><li><span class="y">+</span>1 channel</li><li><span class="y">+</span>1 language</li><li><span class="y">+</span>Basic analytics</li><li><span class="n">-</span>Human handoff</li><li><span class="n">-</span>Voice bot</li></ul><button class="pr-btn" onclick="document.getElementById('wizard').scrollIntoView({behavior:'smooth'})">Start Free Trial</button></div><div class="pr pop" data-b="Most Popular"><div class="pr-t">Growth</div><div class="pr-p">$149<span>/mo</span></div><div class="pr-d">For growing businesses that need multi-channel AI across their operation.</div><ul class="pr-l"><li><span class="y">+</span>2,500 conversations/mo</li><li><span class="y">+</span>3 channels + WhatsApp</li><li><span class="y">+</span>3 languages</li><li><span class="y">+</span>Full dashboard</li><li><span class="y">+</span>Human handoff</li><li><span class="y">+</span>Voice bot</li></ul><button class="pr-btn" onclick="document.getElementById('wizard').scrollIntoView({behavior:'smooth'})">Start Free Trial</button></div><div class="pr"><div class="pr-t">Scale</div><div class="pr-p">$399<span>/mo</span></div><div class="pr-d">For high-volume operations that need unlimited AI with dedicated support.</div><ul class="pr-l"><li><span class="y">+</span>Unlimited conversations</li><li><span class="y">+</span>All channels</li><li><span class="y">+</span>Unlimited languages</li><li><span class="y">+</span>Dashboard + API</li><li><span class="y">+</span>Priority handoff</li><li><span class="y">+</span>Dedicated setup</li></ul><button class="pr-btn" onclick="document.getElementById('wizard').scrollIntoView({behavior:'smooth'})">Start Free Trial</button></div></div></div></section>
+
+<!-- TESTIMONIALS -->
+<section><div class="container"><div class="reveal" style="text-align:center;"><div class="sec-ey">Results</div><div class="sec-h" style="margin:0 auto;">They plugged in. Revenue followed.</div></div><div class="tg reveal stagger"><div class="tc"><div class="tc-t">"We used to spend 3 hours a day just answering phone calls and WhatsApp messages. Now LayerAI handles 73% of it automatically. Our front desk team went from overwhelmed to strategic."</div><div class="tc-a"><div class="tc-av">S</div><div><div class="tc-nm">Dr. Sarah K.</div><div class="tc-rl">Dental Clinic, Dubai</div></div></div></div><div class="tc"><div class="tc-t">"We cut our support team from 70 agents to 28 — not by reducing quality, but by letting AI handle deposits, bonus inquiries, and KYC verification in 12 languages simultaneously. ROI was immediate."</div><div class="tc-a"><div class="tc-av">M</div><div><div class="tc-nm">Marcus T.</div><div class="tc-rl">iGaming Director</div></div></div></div><div class="tc"><div class="tc-t">"I was missing 40% of calls while on job sites. Now AI answers every call, books estimates, and follows up. Revenue jumped 35% in the first month and I actually get to go home on time."</div><div class="tc-a"><div class="tc-av">R</div><div><div class="tc-nm">Roberto L.</div><div class="tc-rl">HVAC, Texas</div></div></div></div></div></div></section>
+
+<!-- SUPPORT -->
+<section id="support"><div class="container"><div class="reveal"><div class="sec-ey">Support</div><div class="sec-h">Talk to us.<br>We are here to help.</div><p class="sec-p">Whether you need a personalized walkthrough, have a technical question, or just want to talk through which plan fits — our team is real, responsive, and ready. Average response time: 47 minutes.</p></div><div class="sup-g reveal"><div class="sup-i"><h3>Reach us directly</h3><p>Walkthrough, technical help, or choosing a plan.</p><div class="sch-list"><div class="sch"><div class="sch-i">D</div><div><div class="sch-t">Book a Live Demo</div><div class="sch-d">30-minute personalized walkthrough</div></div></div><div class="sch"><div class="sch-i">C</div><div><div class="sch-t">Schedule a Call</div><div class="sch-d">Pricing, integrations, custom solutions</div></div></div><div class="sch"><div class="sch-i">E</div><div><div class="sch-t">Email</div><div class="sch-d"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="75060005051a07013519140c1007141c5b161a18">[email&#160;protected]</a></div></div></div><div class="sch"><div class="sch-i">W</div><div><div class="sch-t">WhatsApp</div><div class="sch-d">+1 (555) 000-0000</div></div></div></div></div><div class="cfrm"><h3>Request a demo</h3><p class="cs">We reach out within 2 hours.</p><div class="cfg"><div class="cfgi"><label class="cfl">Name</label><input class="cfi" placeholder="John Smith"></div><div class="cfgi"><label class="cfl">Email</label><input class="cfi" type="email" placeholder="john@biz.com"></div><div class="cfgi"><label class="cfl">Company</label><input class="cfi" placeholder="Business name"></div><div class="cfgi"><label class="cfl">Industry</label><select class="cfi"><option>Select</option><option>Medical</option><option>Legal</option><option>Real Estate</option><option>Gaming</option><option>Finance</option><option>Auto</option><option>Hotel</option><option>Home Services</option><option>Restaurant</option><option>Salon</option><option>Fitness</option><option>Veterinary</option></select></div><div class="cfgi full"><label class="cfl">Need</label><select class="cfi"><option>Live demo</option><option>Pricing</option><option>Technical help</option><option>Partnership</option></select></div><div class="cfgi full"><label class="cfl">Message</label><textarea class="cfi" placeholder="Tell us..."></textarea></div></div><button class="cf-btn">Send Request</button></div></div></div></section>
+
+
+<!-- FAQ -->
+<section id="faq" style="background:var(--bg2);transition:background var(--dur) var(--ease);"><div class="container"><div class="reveal" style="text-align:center;">
+<div class="sec-ey">Questions</div>
+<div class="sec-h" style="margin:0 auto;">Everything you need to know.</div>
+<p class="sec-p" style="margin:12px auto 0;">If your question is not here, our team responds within 2 hours.</p>
+</div>
+<div style="max-width:680px;margin:36px auto 0;" class="reveal">
+<details class="faq-item"><summary>How long does setup actually take?</summary><p>Most businesses go from sign-up to live AI in under 5 minutes. Pick your industry template, enter your business details, and deploy. If you paste your website URL, our AI can extract your services, hours, and FAQs automatically — making it even faster.</p></details>
+<details class="faq-item"><summary>Will the AI give wrong answers to my customers?</summary><p>LayerAI only responds based on the knowledge base you provide — your services, prices, hours, and policies. It does not make things up. When it encounters a question outside its training, it gracefully hands off to your team with full context. You can review and refine responses anytime from the dashboard.</p></details>
+<details class="faq-item"><summary>Can I try it before paying anything?</summary><p>Yes. Our 14-day free trial requires no credit card. You can build a fully working AI demo right on this page in 60 seconds using our interactive wizard. If you like what you see, upgrade to a paid plan. If not, no hard feelings.</p></details>
+<details class="faq-item"><summary>What channels does LayerAI support?</summary><p>Website chat widget, WhatsApp Business, Instagram DMs, email, and AI voice (phone). All channels are managed from a single unified dashboard. Your AI assistant maintains consistent personality and knowledge across every channel.</p></details>
+<details class="faq-item"><summary>Is my customer data safe?</summary><p>All data is encrypted in transit and at rest. We are SOC 2 Type II certified. We never use your business data or customer conversations to train our models. Your data stays yours. See our <a href="#privacy" onclick="event.preventDefault();openPage('pg-privacy')">Privacy Policy</a> for full details.</p></details>
+<details class="faq-item"><summary>Can I cancel anytime?</summary><p>Yes. All plans are month-to-month with no contracts or cancellation fees. Cancel from your dashboard in one click. Your subscription stays active until the end of your billing period. See our <a href="#terms" onclick="event.preventDefault();openPage('pg-terms')">Terms of Service</a> for details.</p></details>
+<details class="faq-item"><summary>What if I need help setting up?</summary><p>Our team is here for you. Growth and Scale plans include onboarding assistance. You can also <a href="#contact" onclick="event.preventDefault();openPage('pg-contact')">book a free 30-minute demo</a> where we will set up LayerAI with your actual business data and walk you through everything.</p></details>
+<details class="faq-item"><summary>How does pricing work for high-volume businesses?</summary><p>Our Scale plan ($399/mo) includes unlimited conversations. For enterprise needs — custom integrations, dedicated infrastructure, SLAs — <a href="#contact" onclick="event.preventDefault();openPage('pg-contact')">contact our sales team</a> for a tailored quote.</p></details>
+</div></div></section>
+
+<!-- CTA -->
+<section class="cta-s"><div class="cta-bg"></div><div class="cta-c reveal"><h2>Your competitors still<br>answer emails manually.</h2><p>While they are typing, your AI has already responded, booked the appointment, and sent the confirmation. Start your free 14-day trial — no credit card, no commitment, no catch.</p><a href="#wizard" class="btn-main">Get LayerAI</a></div></section>
+<div class="bh"><span>LAYERAI</span></div>
+<footer><div style="display:flex;justify-content:center;gap:24px;margin-bottom:12px;"><a href="#features" style="font-size:11px;font-weight:500;">Features</a><a href="#pricing" style="font-size:11px;font-weight:500;">Pricing</a><a href="#about" onclick="event.preventDefault();openPage('pg-about')" style="font-size:11px;font-weight:500;">About</a><a href="#faq" style="font-size:11px;font-weight:500;">FAQ</a><a href="#contact" onclick="event.preventDefault();openPage('pg-contact')" style="font-size:11px;font-weight:500;">Contact</a><a href="#wizard" style="font-size:11px;font-weight:500;">Demo</a></div><p>&copy; 2026 LayerAI. <a href="#privacy" onclick="event.preventDefault();openPage('pg-privacy')">Privacy Policy</a> &middot; <a href="#terms" onclick="event.preventDefault();openPage('pg-terms')">Terms of Service</a> &middot; <a href="#contact" onclick="event.preventDefault();openPage('pg-contact')">Contact Us</a></p></footer>
+
+<script>
+function tTheme(){const h=document.documentElement,n=h.dataset.theme==='light'?'dark':'light';h.dataset.theme=n;document.getElementById('thBtn').textContent=n==='light'?'Dark':'Light';}
+const L={en:{hp:"Now serving 12 industries",h1:"Your business works.<br>Now make it think.",hs:"Enter your business details. Get a working AI assistant in 60 seconds. Chat or voice. Experience it before you pay.",hc1:"Get LayerAI",hc2:"View Pricing"},es:{h1:"Superpoderes,<br>en todas partes",hs:"Chat, Voz e IA en cada canal",hc1:"Obtener LayerAI",hc2:"Ver Precios"},pt:{h1:"Superpoderes,<br>em todo lugar",hs:"Chat, Voz e IA em cada canal",hc1:"Obter LayerAI"},tr:{h1:"Her yerde<br>super gucler",hs:"Chat, Ses ve her kanalda AI",hc1:"LayerAI Al"},ru:{h1:"Суперсилы<br>повсюду",hs:"Чат, голос и ИИ в каждом канале",hc1:"Получить LayerAI"},az:{h1:"Her yerde<br>super gucler",hs:"Chat, Ses ve her kanalda AI",hc1:"LayerAI Al"}};
+function sLang(c){const t=L[c]||L.en;document.querySelectorAll('[data-i18n]').forEach(el=>{const k=el.dataset.i18n;if(t[k])el.innerHTML=t[k];else if(L.en[k])el.innerHTML=L.en[k];});}
+function sTab(i,el){document.querySelectorAll('.s-tab').forEach(t=>t.classList.remove('on'));el.classList.add('on');document.querySelectorAll('.s-panel').forEach(p=>p.classList.remove('on'));document.getElementById('sp'+i).classList.add('on');}
+
+const I={medical:{ic:'🏥',nm:'Medical / Dental',rng:'$299-599',svcs:['Checkup','Dental','X-Ray','Pediatrics','Surgery','Emergency','Vaccines','Labs'],hi:"Welcome to {b}. I can help book appointments, check insurance, or answer questions.",qr:['Book appointment','Insurance?','Hours?'],rs:{'book appointment':"Openings:\n- Tomorrow 10 AM\n- Wed 2:30 PM\n- Thu 9 AM\nWhich works?",'insurance?':"We accept Aetna, BCBS, Cigna, UnitedHealthcare, Medicare. Your provider?",'hours?':"Mon-Fri: {h}\nSat: 9-2\nSun: Closed"}},legal:{ic:'⚖️',nm:'Law Firms',rng:'$399-799',svcs:['Personal Injury','Family','Criminal','Business','Immigration','Real Estate','Estate','Employment'],hi:"Welcome to {b}. Legal consultations available.",qr:['Consultation','Areas?','Fees?'],rs:{'consultation':"Free 30-min consultation. Describe your matter?",'areas?':"Personal Injury, Family, Criminal, Business, Immigration, Real Estate.",'fees?':"PI: contingency. Consult: free. Others: estimate after review."}},realestate:{ic:'🏠',nm:'Real Estate',rng:'$249-499',svcs:['Buying','Selling','Rentals','Commercial','Management','Valuation','Investment','New Dev'],hi:"Welcome to {b}. Buying, selling, or browsing?",qr:['Listings','Sell','Market'],rs:{'listings':"3BR Palm Jumeirah: $1.2M\n2BR Downtown: $680K\n4BR Villa: $1.8M",'sell':"Need: type, location, size for estimate.",'market':"Prices up 12% YoY. Selling in 30-45 days."}},gaming:{ic:'🎰',nm:'Gaming / iGaming',rng:'$499-999',svcs:['Deposits','Withdrawals','Bonuses','KYC','VIP','Responsible Gaming','Tech','Promos'],hi:"Welcome to {b} support. 24/7.",qr:['Bonus','Deposit','Verify'],rs:{'bonus':"Welcome: 150% to $500 (ACTIVE)\nSpins: 23 left\nCashback: 10% weekly",'deposit':"Card (instant), Crypto (1-3 confirms), Bank (1-2 days), E-wallet (instant). Min: $20.",'verify':"Need: Gov ID, proof of address, payment verify. 24-48h."}},finance:{ic:'💰',nm:'Financial',rng:'$349-699',svcs:['Tax','Bookkeeping','Planning','Audit','Payroll','Advisory','Investment','Estate'],hi:"Welcome to {b}. Tax, bookkeeping, planning.",qr:['Tax help','Consult','Docs'],rs:{'tax help':"Individual: $199. Business: $499. Strategy: $299/session.",'consult':"Tue 11AM, Wed 2PM, Fri 10AM available.",'docs':"W-2s, 1099s, mortgage stmt, donations, prior return."}},auto:{ic:'🚗',nm:'Auto Dealers',rng:'$199-399',svcs:['New','Used','Service','Parts','Finance','Trade-In','Test Drive','Fleet'],hi:"Welcome to {b}. Vehicles, service, test drives.",qr:['Inventory','Service','Test drive'],rs:{'inventory':"Camry: $28.5K. BMW X3: $42.9K. CR-V: $34.2K.",'service':"Oil: $89. Brakes: $49. Diag: $129. Tomorrow 9AM.",'test drive':"20-30 min. Bring ID. Most days available."}},hotel:{ic:'🏨',nm:'Hotels',rng:'$249-499',svcs:['Rooms','Concierge','Spa','Dining','Events','Transfer','Tours','Service'],hi:"Welcome to {b}. Rooms, spa, dining, tips.",qr:['Rooms','Spa','Local'],rs:{'rooms':"Deluxe: $289. Suite: $459. Presidential: $890. Breakfast included.",'spa':"Deep Tissue: $120. Hot Stone: $165. Couples: $280.",'local':"Ocean Terrace (5min). Sunset Cove (shuttle). Marina Mall (10min)."}},home:{ic:'🔧',nm:'Home Services',rng:'$149-349',svcs:['Plumbing','HVAC','Electrical','Roofing','Painting','Remodel','Landscape','Clean'],hi:"Thanks for reaching out to {b}. Repairs, estimates, emergencies.",qr:['Emergency','Estimate','Area'],rs:{'emergency':"Issue? Address? Phone? Team: 30-60 min. $99 (waived with repair).",'estimate':"Plumbing: $150-500. HVAC: $89-199. Heater: $800-2500.",'area':"Metro + 30mi. Under 15mi: free. Beyond: $25."}},restaurant:{ic:'🍽️',nm:'Restaurants',rng:'$79-199',svcs:['Dine-In','Takeout','Delivery','Catering','Events','Reserve','Gift Cards','Loyalty'],hi:"Welcome to {b}. Reserve, menu, takeout.",qr:['Reserve','Menu','Delivery'],rs:{'reserve':"6PM: 2 left. 7:30: patio. 8:30: 3 open.",'menu':"Risotto: $24. Pizza: $18. Osso Buco: $32.",'delivery':"5mi. $4.99 (free >$50). 35-45 min."}},salon:{ic:'💇',nm:'Salons',rng:'$79-199',svcs:['Cut','Color','Blowout','Mani','Pedi','Facial','Massage','Lashes'],hi:"Welcome to {b}. Appointments, services, stylists.",qr:['Book','Services','Stylist'],rs:{'book':"Cut: $65 Thu 2PM. Color: $120+ Fri 10AM. Blowout: $45 tomorrow.",'services':"Hair, Nails, Skin, Body. First visit: 20% off.",'stylist':"Maria: Color 4.9. Alex: Cuts 4.8. Priya: Curly 5.0."}},fitness:{ic:'💪',nm:'Fitness',rng:'$99-199',svcs:['Membership','Classes','PT','CrossFit','Yoga','Pool','Sauna','Nutrition'],hi:"Welcome to {b}. Memberships, classes, training.",qr:['Plans','Classes','Trial'],rs:{'plans':"Basic $29. Premium $59. Elite $99. Annual -20%.",'classes':"6AM HIIT. 8AM Yoga. 12PM Spin. 5:30 Boxing. 7PM Strength.",'trial':"7 days free. Full access. No card."}},vet:{ic:'🐾',nm:'Veterinary',rng:'$199-349',svcs:['Checkup','Vaccines','Surgery','Dental','Emergency','Groom','Labs','Nutrition'],hi:"Welcome to {b}. Appointments, health, urgent care.",qr:['Book','Pet sick','Vaccines'],rs:{'book':"Tomorrow 9:30. Wed 2PM. Thu 11AM.",'pet sick':"URGENT: call now. SOON: same-day. MONITOR: schedule.",'vaccines':"Dogs: DHPP+Rabies 8-12wk. Cats: FVRCP+Rabies. Annual."}}};
+let cInd=null,vOn=false;
+function buildG(){const g=document.getElementById('iG');g.innerHTML='';for(const[k,d]of Object.entries(I)){const c=document.createElement('div');c.className='ic';c.innerHTML=`<span class="ic-i">${d.ic}</span><div class="ic-n">${d.nm}</div><div class="ic-r">${d.rng}</div>`;c.onclick=()=>{document.querySelectorAll('.ic').forEach(x=>x.classList.remove('sel'));c.classList.add('sel');cInd=k;document.getElementById('b1n').disabled=false;};g.appendChild(c);}}buildG();
+function pT(e){document.querySelectorAll('.to').forEach(x=>x.classList.remove('sel'));e.classList.add('sel');}
+function goS(n){if(n===2&&cInd){const s=document.getElementById('svc');s.innerHTML='';I[cInd].svcs.forEach(v=>{const t=document.createElement('div');t.className='sv';t.textContent=v;t.onclick=()=>t.classList.toggle('sel');s.appendChild(t);});}if(n===3){document.getElementById('bN').textContent='"'+(document.getElementById('fN').value||I[cInd].nm)+'"';rB(()=>goS(4));}if(n===4)sUp();document.querySelectorAll('.wp').forEach(p=>p.classList.remove('on'));document.getElementById('p'+n).classList.add('on');for(let i=1;i<=4;i++){const d=document.getElementById('d'+i);d.classList.remove('on','ok');if(i<n){d.classList.add('ok');d.textContent='\u2713';}else if(i===n){d.classList.add('on');d.textContent=i;}else d.textContent=i;if(i<4)document.getElementById('l'+i).classList.toggle('on',i<n);}}
+function rB(cb){const ids=['bi1','bi2','bi3','bi4','bi5'];let i=0;ids.forEach(id=>{const e=document.getElementById(id);e.classList.remove('on','ok');e.querySelector('span').textContent='\u25CB';});(function nx(){if(i>0){const p=document.getElementById(ids[i-1]);p.classList.remove('on');p.classList.add('ok');p.querySelector('span').textContent='\u2713';}if(i<ids.length){const c=document.getElementById(ids[i]);c.classList.add('on');c.querySelector('span').textContent='\u25C9';i++;setTimeout(nx,600+Math.random()*400);}else setTimeout(cb,400);})();}
+function sUp(){const d=I[cInd],b=document.getElementById('fN').value||'Your Business',h=document.getElementById('fH').value||'Mon-Fri 9am-6pm';document.getElementById('cN').textContent=b;document.getElementById('cA').textContent=d.ic;document.getElementById('wN').textContent=b;const g=d.hi.replace('{b}',b);document.getElementById('cM').innerHTML='<div class="msg msg-a">'+g+'</div>';document.getElementById('cQ').innerHTML=d.qr.map(q=>'<button class="qb" onclick="sQ(this)">'+q+'</button>').join('');document.getElementById('wM').innerHTML='<div class="wm wm-in">'+g+'<div class="wt">'+new Date().toLocaleTimeString([],{hour:'2-digit',minute:'2-digit'})+'</div></div>';const sq=d.qr[0],sa=Object.values(d.rs)[0].replace('{h}',h).replace('{b}',b);const mm='<div class="mm mm-u">'+sq+'</div><div class="mm mm-a">'+sa.replace(/\n/g,'<br>').substring(0,140)+'...</div>';document.getElementById('mC').innerHTML=mm;document.getElementById('mW').innerHTML=mm;document.getElementById('mE').innerHTML='<div class="mm mm-a" style="max-width:100%"><strong>Re: '+sq+'</strong><br>'+sa.replace(/\n/g,'<br>').substring(0,120)+'...<br><br>'+b+' AI</div>';document.getElementById('mI').innerHTML=mm;}
+function gR(t){const d=I[cInd],b=document.getElementById('fN').value||'Your Business',h=document.getElementById('fH').value||'Mon-Fri 9am-6pm',k=t.toLowerCase();let r=null;for(const[ky,v]of Object.entries(d.rs)){if(k.includes(ky.split(' ')[0])||ky.includes(k.split(' ')[0])){r=v;break;}}if(!r)r='Thank you. At '+b+', we help with everything. Try the suggested replies.';return r.replace('{b}',b).replace('{h}',h);}
+function sQ(e){aM(e.textContent,'u');e.parentElement.innerHTML='';rC(e.textContent);}
+function sC(){const i=document.getElementById('cI'),t=i.value.trim();if(!t)return;aM(t,'u');i.value='';document.getElementById('cQ').innerHTML='';rC(t);}
+function aM(t,tp){const e=document.getElementById('cM'),m=document.createElement('div');m.className='msg msg-'+(tp==='u'?'u':'a');m.innerHTML=t.replace(/\n/g,'<br>');e.appendChild(m);e.scrollTop=e.scrollHeight;}
+function rC(t){const e=document.getElementById('cM'),d=document.createElement('div');d.className='typ';d.innerHTML='<span></span><span></span><span></span>';e.appendChild(d);e.scrollTop=e.scrollHeight;setTimeout(()=>{d.remove();aM(gR(t),'a');const q=document.getElementById('cQ'),rm=I[cInd].qr.filter(x=>x.toLowerCase()!==t.toLowerCase());if(rm.length)q.innerHTML=rm.slice(0,2).map(x=>'<button class="qb" onclick="sQ(this)">'+x+'</button>').join('');},700+Math.random()*500);}
+function sW(){const i=document.getElementById('wI'),t=i.value.trim();if(!t)return;aW(t,'out');i.value='';setTimeout(()=>aW(gR(t),'in'),800+Math.random()*400);}
+function aW(t,tp){const e=document.getElementById('wM'),m=document.createElement('div');m.className='wm wm-'+tp;m.innerHTML=t.replace(/\n/g,'<br>')+'<div class="wt">'+new Date().toLocaleTimeString([],{hour:'2-digit',minute:'2-digit'})+'</div>';e.appendChild(m);e.scrollTop=e.scrollHeight;}
+function tV(){vOn=!vOn;const o=document.getElementById('vO'),ti=document.getElementById('vTi'),de=document.getElementById('vDe'),tx=document.getElementById('vTx');if(vOn){o.classList.add('on');ti.textContent='Listening...';de.textContent='Say: "Book an appointment"';setTimeout(()=>{const b=document.getElementById('fN').value||'Your Business';tx.classList.add('show');tx.innerHTML='<strong style="color:var(--tx3)">You:</strong> "Book an appointment"<br><br><strong style="color:var(--ac)">AI:</strong> "Happy to help at '+b+'. Tomorrow 10 AM or Wednesday 2:30 PM?"';ti.textContent='AI Responding...';setTimeout(()=>{vOn=false;o.classList.remove('on');ti.textContent='Tap again';},3000);},2500);}else{o.classList.remove('on');ti.textContent='Tap to call your AI';de.textContent='Experience voice interaction';}}
+function sD(id,el){document.querySelectorAll('.dt').forEach(t=>t.classList.remove('on'));el.classList.add('on');document.querySelectorAll('.dpp').forEach(p=>p.classList.remove('on'));({c:'xC',v:'xV',w:'xW',m:'xM'})[id]&&document.getElementById({c:'xC',v:'xV',w:'xW',m:'xM'}[id]).classList.add('on');}
+
+/* Scroll reveals */
+const obs=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('vis');obs.unobserve(e.target);}});},{threshold:.08,rootMargin:'0px 0px -30px 0px'});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+
+/* Fireflies */
+(function(){const c=document.querySelector('.fireflies');if(!c)return;for(let i=0;i<18;i++){const f=document.createElement('div');f.className='firefly';f.style.left=Math.random()*100+'%';f.style.bottom=-(Math.random()*20)+'%';f.style.animationDuration=(8+Math.random()*14)+'s';f.style.animationDelay=(Math.random()*8)+'s';f.style.width=f.style.height=(2+Math.random()*3)+'px';c.appendChild(f);}})();
+
+/* Gentle float for hero cards */
+setTimeout(()=>{document.querySelectorAll('.float-card').forEach((el,i)=>{el.style.animation='gentleFloat '+(5+i*1.5)+'s ease-in-out infinite '+(i*0.4)+'s';});},2000);
+
+/* Parallax on blob */
+let ticking=false;
+window.addEventListener('scroll',()=>{if(!ticking){requestAnimationFrame(()=>{const s=window.scrollY;const b=document.querySelector('.hero-blob');if(b&&s<window.innerHeight)b.style.transform='translateX(-50%) translateY('+s*0.08+'px)';ticking=false;});ticking=true;}});
+
+/* Add tilt class to cards */
+document.querySelectorAll('.feat,.how,.pr,.tc,.sch,.float-card,.ic').forEach(el=>el.classList.add('tilt-card'));
+
+/* Animate stat numbers */
+function animateValue(el,start,end,suffix,duration){
+  let startTime=null;
+  const step=(ts)=>{
+    if(!startTime)startTime=ts;
+    const p=Math.min((ts-startTime)/duration,1);
+    const eased=1-(1-p)*(1-p);
+    const v=Math.round(start+eased*(end-start));
+    el.textContent=(suffix==='%'?v+'%':suffix==='+'?v+'+':suffix==='s'?'<'+v+'s':v+'/7');
+    if(p<1)requestAnimationFrame(step);
+  };
+  requestAnimationFrame(step);
+}
+const statsObs=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){
+  const stats=e.target.querySelectorAll('.hs-v');
+  if(stats[0])animateValue(stats[0],0,73,'%',1200);
+  if(stats[1])animateValue(stats[1],0,3,'s',800);
+  if(stats[2]){stats[2].textContent='24/7';}
+  if(stats[3])animateValue(stats[3],0,40,'+',1000);
+  statsObs.unobserve(e.target);
+}});},{threshold:.5});
+const hStats=document.querySelector('.hero-stats');
+if(hStats){hStats.querySelectorAll('.hs-v').forEach(el=>el.textContent='—');statsObs.observe(hStats);}
+
+/* Active nav link on scroll */
+const sections=document.querySelectorAll('section[id]');
+const navLinks=document.querySelectorAll('.n-link');
+const navObs2=new IntersectionObserver(es=>{es.forEach(e=>{
+  if(e.isIntersecting){
+    const id=e.target.id;
+    navLinks.forEach(l=>{l.style.color=l.getAttribute('href')==='#'+id?'var(--ac)':'';});
+  }
+});},{threshold:.3,rootMargin:'-80px 0px -60% 0px'});
+sections.forEach(s=>navObs2.observe(s));
+
+</script>
+
+<!-- ========= SUB-PAGES ========= -->
+<div class="subpage" id="pg-about">
+<button class="sp-close" onclick="closePage('pg-about')">&times;</button>
+<div class="sp-wrap">
+<div class="sp-bc"><a onclick="closePage('pg-about')">Home</a> / About</div>
+<h1>About LayerAI</h1>
+<p>We started LayerAI because we watched small businesses drown in customer messages they could not keep up with. A dental clinic missing calls during procedures. A restaurant losing reservations because no one could answer WhatsApp at 11 PM. A law firm where the partners spent more time on intake calls than practicing law.</p>
+<p>The technology to solve this existed — but it was locked behind six-figure enterprise contracts, months of implementation, and teams of developers. We thought that was wrong.</p>
+<div class="sp-glass">
+<h3>Our Belief</h3>
+<p style="font-size:18px;font-weight:500;color:var(--tx);line-height:1.5;margin:0;">Every business deserves AI that works as hard as they do. Not in six months. Not after a $100K contract. Today. In five minutes. In their language. On their channels.</p>
+</div>
+<h2>What We Built</h2>
+<p>LayerAI is an AI customer support platform designed from the ground up for small and medium businesses. We built pre-trained templates for 12 industries — medical, legal, real estate, gaming, restaurants, salons, and more — so businesses can go live in minutes, not months.</p>
+<p>Our AI handles chat, voice calls, WhatsApp, Instagram DMs, and email from a single dashboard. It speaks 40+ languages automatically. It books appointments, answers FAQs, qualifies leads, and knows when to hand off to a human. And it starts at $49/month.</p>
+<h2>Our Values</h2>
+<div class="val-grid">
+<div class="val-card"><h3>Speed over complexity</h3><p>If a business cannot go live in 5 minutes, we have failed. Every feature we build must make things simpler, not more complicated.</p></div>
+<div class="val-card"><h3>Honesty over hype</h3><p>AI is not magic. It gets things wrong sometimes. We built LayerAI to be transparent about its limitations and graceful when it reaches them.</p></div>
+<div class="val-card"><h3>Privacy by default</h3><p>We never use customer data to train our models. Your competitive advantage is yours. We are SOC 2 certified and GDPR compliant.</p></div>
+<div class="val-card"><h3>Accessible pricing</h3><p>Enterprise-grade AI should not require an enterprise budget. Our pricing starts where small businesses can actually afford it.</p></div>
+</div>
+<h2>Where We Are Going</h2>
+<p>Today, LayerAI handles over 2 million conversations per year across 30 countries. Our customers report 73% auto-resolution rates, 35% revenue increases, and teams that finally have time to focus on growth instead of inbox management.</p>
+<p>Tomorrow, we are building toward a world where every small business has AI that is as good as what Fortune 500 companies use — but accessible to a solo dentist in Dubai, a taco shop in Mexico City, or a plumber in Texas.</p>
+<h2>Get Involved</h2>
+<p>Want to partner? We work with agencies, resellers, and industry consultants. <a onclick="openPage('pg-contact')" style="cursor:pointer;">Get in touch</a>.</p>
+<p>Want to try it? <a onclick="closePage('pg-about');document.getElementById('wizard').scrollIntoView({behavior:'smooth'})" style="cursor:pointer;">Build your AI demo in 60 seconds</a> — no sign-up required.</p>
+<button class="sp-back" onclick="closePage('pg-about')">&larr; Back to home</button>
+</div>
+</div>
+
+<div class="subpage" id="pg-privacy">
+<button class="sp-close" onclick="closePage('pg-privacy')">&times;</button>
+<div class="sp-wrap">
+<div class="sp-bc"><a onclick="closePage('pg-privacy')">Home</a> / Privacy Policy</div>
+<h1>Privacy Policy</h1>
+<p class="sp-updated">Last updated: March 2026</p>
+<p>At LayerAI, your privacy is fundamental to how we build and operate our platform. This policy explains what data we collect, why, and how we protect it.</p>
+<div class="sp-glass">
+<h3>The Short Version</h3>
+<p style="margin:0;">We collect only what we need to run your AI assistant. We never sell your data. We never use your customer conversations to train our models. Your data stays yours. Period.</p>
+</div>
+<h2>Information We Collect</h2>
+<p>When you create an account, we collect your name, email address, business name, and billing information. When you use our platform, we process the conversations your AI assistant handles on your behalf — this includes messages from your customers across chat, WhatsApp, voice, and email channels.</p>
+<h2>How We Use Your Data</h2>
+<p>We use your information to provide, maintain, and improve the LayerAI service. Specifically, we use it to power your AI assistant's responses, generate analytics for your dashboard, process payments, and send you service-related communications.</p>
+<p>We do not use your business data or customer conversations to train our AI models. Your competitive advantage stays yours.</p>
+<h2>Data Security</h2>
+<p>All data is encrypted in transit (TLS 1.3) and at rest (AES-256). We use SOC 2 Type II certified infrastructure. Access to customer data is restricted to authorized personnel only and is logged and audited.</p>
+<h2>Data Retention</h2>
+<p>We retain your conversation data for as long as your account is active. When you delete your account, we permanently remove all associated data within 30 days. You can export your data at any time from the dashboard.</p>
+<h2>Third-Party Services</h2>
+<p>We use carefully selected third-party services for infrastructure (cloud hosting), payments (Stripe), and communication channels (Twilio for WhatsApp, Deepgram and ElevenLabs for voice). Each provider is contractually bound to protect your data.</p>
+<h2>Your Rights</h2>
+<p>You have the right to access, correct, delete, or export your data at any time. If you are in the EU, you have additional rights under GDPR including data portability and the right to be forgotten. Contact us at privacy@layerai.com for any requests.</p>
+<h2>Cookies</h2>
+<p>We use essential cookies to keep you logged in and analytics cookies to understand how our website performs. You can disable non-essential cookies at any time through your browser settings.</p>
+<h2>Contact</h2>
+<p>For privacy-related questions, reach out to <strong>privacy@layerai.com</strong>.</p>
+<button class="sp-back" onclick="closePage('pg-privacy')">&larr; Back to home</button>
+</div>
+</div>
+
+<div class="subpage" id="pg-terms">
+<button class="sp-close" onclick="closePage('pg-terms')">&times;</button>
+<div class="sp-wrap">
+<div class="sp-bc"><a onclick="closePage('pg-terms')">Home</a> / Terms of Service</div>
+<h1>Terms of Service</h1>
+<p class="sp-updated">Last updated: March 2026</p>
+<p>These Terms of Service govern your use of LayerAI's AI customer support automation platform. By using LayerAI, you agree to these terms.</p>
+<div class="sp-glass">
+<h3>Plain English Summary</h3>
+<p style="margin:0;">Use LayerAI for legitimate business purposes. Do not abuse the platform. Pay for what you use. We will do our best to keep things running. If something goes wrong, we will make it right.</p>
+</div>
+<h2>1. Your Account</h2>
+<p>You must provide accurate information when creating your account. You are responsible for maintaining the security of your account credentials and for all activity under your account.</p>
+<h2>2. Acceptable Use</h2>
+<p>LayerAI is designed for legitimate customer support automation. You agree not to use the platform to send spam, distribute malware, impersonate others, engage in illegal activities, or harass any person. AI responses must be truthful and not misleading.</p>
+<h2>3. Your Content</h2>
+<p>You retain ownership of all business data, knowledge base content, and customer conversations processed through LayerAI. You grant us a limited license to process this content solely to provide the service. We will never claim ownership of your data.</p>
+<h2>4. Service Level</h2>
+<p>We target 99.9% uptime for all paid plans. If we fail to meet this in any calendar month, you are entitled to service credits. Scheduled maintenance is communicated 48 hours in advance.</p>
+<h2>5. Billing and Cancellation</h2>
+<p>Plans are billed monthly or annually. You can upgrade, downgrade, or cancel at any time from your dashboard. Cancellation takes effect at the end of your current billing period. We offer a 14-day free trial with no credit card required.</p>
+<h2>6. Intellectual Property</h2>
+<p>LayerAI owns the platform, technology, and all associated intellectual property. You own your data. The AI models, algorithms, and interface design remain our property.</p>
+<h2>7. Limitation of Liability</h2>
+<p>LayerAI is provided "as is." While we strive for accuracy, AI responses may occasionally be incorrect. You are responsible for monitoring AI interactions. Our total liability is limited to the amount you paid in the preceding 12 months.</p>
+<h2>8. Changes</h2>
+<p>We may update these terms from time to time. Material changes will be communicated via email at least 30 days before they take effect.</p>
+<h2>9. Contact</h2>
+<p>Questions? Contact <strong>legal@layerai.com</strong>.</p>
+<button class="sp-back" onclick="closePage('pg-terms')">&larr; Back to home</button>
+</div>
+</div>
+
+<div class="subpage" id="pg-contact">
+<button class="sp-close" onclick="closePage('pg-contact')">&times;</button>
+<div class="sp-wrap">
+<div class="sp-bc"><a onclick="closePage('pg-contact')">Home</a> / Contact</div>
+<h1>Get in Touch</h1>
+<p>Whether you want a personalized demo, have technical questions, need help choosing the right plan, or are interested in partnering with us — we are here and we respond fast.</p>
+<div class="sp-glass">
+<h3>Response Times</h3>
+<p style="margin:0;">Sales inquiries: under 2 hours. Technical support: under 4 hours (Growth), under 1 hour (Scale). Partnership inquiries: within 24 hours.</p>
+</div>
+<h2>Book a Live Demo</h2>
+<p>See LayerAI in action with your own business data. 30 minutes, no pressure, no commitment. Or <a onclick="closePage('pg-contact');document.getElementById('wizard').scrollIntoView({behavior:'smooth'})" style="cursor:pointer;">try the self-service demo right now</a>.</p>
+<h2>Sales</h2>
+<p>Talk to our team about the right plan, custom integrations, volume pricing, or enterprise deployment.</p>
+<p><strong>Email:</strong> sales@layerai.com &nbsp; <strong>WhatsApp:</strong> +1 (555) 000-0000</p>
+<h2>Technical Support</h2>
+<p>Need help with setup, integrations, API, or troubleshooting? Our team has deep expertise across all 12 industry templates.</p>
+<p><strong>Email:</strong> support@layerai.com &nbsp; <strong>In-app:</strong> 24/7 from your dashboard</p>
+<h2>Partnerships</h2>
+<p>We work with agencies, resellers, technology partners, and industry consultants. If you serve small businesses and want to offer AI support as part of your solution, let us talk.</p>
+<p><strong>Email:</strong> partners@layerai.com</p>
+<h2>Press</h2>
+<p>For press inquiries, interviews, or media assets: <strong>press@layerai.com</strong></p>
+<button class="sp-back" onclick="closePage('pg-contact')">&larr; Back to home</button>
+</div>
+</div>
+
+</body>
+</html>
